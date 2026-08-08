@@ -124,20 +124,11 @@ body {
     inset: 5px;
     border: 1px solid rgba(82, 107, 89, 0.28);
     border-radius: 50%;
-    /*
-     * Positive rotation = clockwise.
-     * The entire orbit rotates clockwise,
-     * carrying the leaf around the circle.
-     */
-    animation: glowinloaderOrbit 7s linear infinite;
-    transform-origin: center center;
-    will-change: transform;
 }
 
 
 
     /* Second orbit */
-
     .glowinloader__orbit::before {
         content: "";
         position: absolute;
@@ -154,7 +145,8 @@ body {
 .glowinloader__leaf {
     position: absolute;
     /*
-     * Start at the top of the orbit.
+     * Place the leaf exactly on the
+     * outside circular line.
      */
     top: -18px;
     left: 50%;
@@ -164,10 +156,9 @@ body {
     align-items: center;
     justify-content: center;
     /*
-     * Keep the leaf centered on the orbit.
+     * Start at the top of the circle.
      */
-    transform: translateX(-50%) rotate(0deg);
-    transform-origin: center center;
+    transform: translateX(-50%);
     color: var(--glowin-botanical);
     background: var(--glowin-ivory);
     border-radius: 50%;
@@ -175,12 +166,13 @@ body {
     box-shadow: 0 3px 12px rgba(36, 56, 47, 0.08);
     z-index: 10;
     /*
-     * Counter-rotate the leaf so it stays upright
-     * while its parent orbit rotates clockwise.
+     * The leaf itself travels around
+     * the circular path.
      */
-    animation: glowinloaderLeafCounterRotate 7s linear infinite;
-    will-change: transform;
+    animation: glowinloaderLeafOrbit 7s linear infinite;
+    transform-origin: 50% calc(50% + 103px);
 }
+
 
 
 
@@ -726,8 +718,19 @@ body {
 
 .glowinloader__leaf i {
     display: block;
+    transform: rotate(-20deg);
 }
 
+@keyframes glowinloaderLeafOrbit {
+
+    0% {
+        transform: translateX(-50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translateX(-50%) rotate(360deg);
+    }
+}
 
 /*@keyframes glowinloaderLeafSway {
 

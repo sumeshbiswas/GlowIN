@@ -731,14 +731,3 @@ body {
         transform: translateX(-50%) rotate(360deg);
     }
 }
-
-/*@keyframes glowinloaderLeafSway {
-
-    0%, 100% {
-        transform: rotate(-12deg) scale(0.95);
-    }
-
-    50% {
-        transform: rotate(12deg) scale(1.05);
-    }
-}*/

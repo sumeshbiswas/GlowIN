@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Premium skincare products for healthy, radiant skin." />
+    <meta name="keywords" content="skincare, beauty, cosmetics, face care, skincare products" />
+    <title>@ViewData["Title"] - GlowIN</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Bootstrap 5.3.8 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+          crossorigin="anonymous">
+
+    <!-- Bootstrap Icons 1.13.1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="~/css/main.css" asp-append-version="true" />
+</head>
+<body>
+    
+     <!-- GLOWIN PREMIUM HERBAL LOADER -->
+    <div class="glowinloader" id="glowinloader" aria-hidden="false">
+        <div class="glowinloader__content">
+            <div class="glowinloader__brand">
+                Glow<span>IN</span>
+            </div>
+            <div class="glowinloader__visual">
+
+                <!-- Circular Botanical Orbit -->
+                <div class="glowinloader__orbit">
+
+                    <!-- Orbit Leaf -->
+                    <div class="glowinloader__leaf">
+                        <i class="bi bi-leaf-fill"></i>
+                    </div>
+
+                </div>
+
+
+                <!-- Decorative Inner Circle -->
+                <div class="glowinloader__inner-circle"></div>
+
+
+                <!-- People -->
+                <div class="glowinloader__people">
+
+
+                    <!-- =========================
+                         WOMAN
+                         ========================= -->
+
+                    <div class="glowinloader__person glowinloader__woman">
+
+                        <div class="glowinloader__hair"></div>
+
+                        <div class="glowinloader__head">
+
+                            <div class="glowinloader__face"></div>
+
+                        </div>
+
+                        <div class="glowinloader__neck"></div>
+
+                        <div class="glowinloader__body"></div>
+
+                    </div>
+
+
+                    <!-- =========================
+                         MAN
+                         ========================= -->
+
+                    <div class="glowinloader__person glowinloader__man">
+
+                        <div class="glowinloader__hair"></div>
+
+                        <div class="glowinloader__head">
+
+                            <div class="glowinloader__face"></div>
+
+                        </div>
+
+                        <div class="glowinloader__neck"></div>
+
+                        <div class="glowinloader__body"></div>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- Botanical Glow -->
+                <div class="glowinloader__glow"></div>
+
+            </div>
+
+
+            <!-- Loading Text -->
+
+            <div class="glowinloader__message">
+                Naturally beautiful
+            </div>
+
+            <div class="glowinloader__submessage">
+                Preparing your botanical experience
+            </div>
+
+
+            <!-- Progress -->
+
+            <div class="glowinloader__progress">
+
+                <span></span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <header>
+        
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+           
+        </main>
+    </div>
+
+    <footer>
+        <div class="container">
+            &copy; 2026 - GlowIN - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5.3.8 JavaScript -->
+    <!-- Includes Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
+
+    <!-- Your Custom JavaScript -->
+    <script src="~/js/main.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

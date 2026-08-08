@@ -1,0 +1,698 @@
+/* =========================================================
+   GLOWIN GLOBAL COLOR SYSTEM
+   ========================================================= */
+
+:root {
+    /* Primary Brand */
+    --glowin-forest: #24382F;
+    --glowin-botanical: #526B59;
+    --glowin-sage: #A8B5A0;
+    /* Background */
+    --glowin-ivory: #F8F5EE;
+    --glowin-cream: #EEE8DA;
+    /* Premium Accent */
+    --glowin-gold: #B49A62;
+    /* Text */
+    --glowin-charcoal: #252724;
+    /* White */
+    --glowin-white: #FFFFFF;
+    /* Skin tones */
+    --glowin-skin: #D8B59C;
+    --glowin-skin-shadow: #C99C81;
+}
+
+html {
+    min-height: 100%;
+    overflow-y: auto;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* =========================================================
+   GLOWIN LOADER
+   ========================================================= */
+
+.glowinloader {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    width: 100%;
+    min-height: 100dvh;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: radial-gradient( circle at center, var(--glowin-white) 0%, var(--glowin-ivory) 52%, var(--glowin-cream) 100% );
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.7s ease, visibility 0.7s ease;
+}
+
+
+    /* =========================================================
+   HIDDEN STATE
+   ========================================================= */
+
+    .glowinloader.glowinloader--hidden {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.glowinloader__content {
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.glowinloader__brand {
+    margin-bottom: clamp(25px, 5vw, 38px);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(28px, 5vw, 36px);
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    line-height: 1;
+    color: var(--glowin-forest);
+}
+
+
+    .glowinloader__brand span {
+        color: var(--glowin-gold);
+    }
+
+
+/* =========================================================
+   MAIN VISUAL
+   ========================================================= */
+
+.glowinloader__visual {
+    position: relative;
+    width: clamp(175px, 42vw, 220px);
+    height: clamp(175px, 42vw, 220px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =========================================================
+   ORBIT
+   ========================================================= */
+
+.glowinloader__orbit {
+    position: absolute;
+    inset: 5px;
+    border: 1px solid rgba( 82, 107, 89, 0.28 );
+    border-radius: 50%;
+    animation: glowinloaderOrbit 4.5s linear infinite;
+}
+
+
+    /* Second orbit */
+
+    .glowinloader__orbit::before {
+        content: "";
+        position: absolute;
+        inset: 17px;
+        border: 1px dashed rgba( 180, 154, 98, 0.28 );
+        border-radius: 50%;
+    }
+
+
+/* =========================================================
+   LEAF
+   ========================================================= */
+
+.glowinloader__leaf {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-50%) rotate(-20deg);
+    color: var(--glowin-botanical);
+    background: var(--glowin-ivory);
+    border-radius: 50%;
+    font-size: 24px;
+    box-shadow: 0 3px 12px rgba(36, 56, 47, 0.08);
+}
+
+
+/* =========================================================
+   INNER CIRCLE
+   ========================================================= */
+
+.glowinloader__inner-circle {
+    position: absolute;
+    width: 135px;
+    height: 135px;
+    border-radius: 50%;
+    border: 1px solid rgba( 82, 107, 89, 0.08 );
+}
+
+
+/* =========================================================
+   PEOPLE CONTAINER
+   ========================================================= */
+
+.glowinloader__people {
+    position: relative;
+    z-index: 5;
+    width: 135px;
+    height: 150px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    transform: scale( clamp( 0.78, 1vw + 0.65, 1 ) );
+}
+
+
+/* =========================================================
+   PERSON
+   ========================================================= */
+
+.glowinloader__person {
+    position: relative;
+    width: 70px;
+    height: 145px;
+}
+
+
+/* =========================================================
+   WOMAN
+   ========================================================= */
+
+.glowinloader__woman {
+    z-index: 3;
+    transform: translateX(17px);
+}
+
+
+/* =========================================================
+   MAN
+   ========================================================= */
+
+.glowinloader__man {
+    z-index: 2;
+    transform: translateX(-17px);
+}
+
+
+/* =========================================================
+   HEAD
+   ========================================================= */
+
+.glowinloader__head {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    width: 34px;
+    height: 42px;
+    transform: translateX(-50%);
+    border-radius: 45% 45% 48% 48%;
+    background: var(--glowin-skin);
+}
+
+
+/* =========================================================
+   FACE
+   ========================================================= */
+
+.glowinloader__face {
+    position: absolute;
+    left: 50%;
+    bottom: 6px;
+    width: 25px;
+    height: 7px;
+    transform: translateX(-50%);
+    border-bottom: 1px solid rgba( 75, 48, 38, 0.20 );
+    border-radius: 50%;
+}
+
+
+/* =========================================================
+   HAIR
+   ========================================================= */
+
+.glowinloader__hair {
+    position: absolute;
+    z-index: 3;
+    top: 11px;
+    left: 50%;
+    width: 43px;
+    height: 39px;
+    transform: translateX(-50%);
+    border-radius: 55% 55% 35% 35%;
+    background: var(--glowin-charcoal);
+}
+
+
+/* =========================================================
+   WOMAN HAIR
+   ========================================================= */
+
+.glowinloader__woman
+.glowinloader__hair {
+    width: 49px;
+    height: 64px;
+    top: 9px;
+    border-radius: 55% 55% 45% 45%;
+}
+
+
+    /* Long hair sides */
+
+    .glowinloader__woman
+    .glowinloader__hair::before {
+        content: "";
+        position: absolute;
+        left: -3px;
+        top: 25px;
+        width: 13px;
+        height: 52px;
+        border-radius: 0 0 12px 12px;
+        background: var(--glowin-charcoal);
+    }
+
+
+    .glowinloader__woman
+    .glowinloader__hair::after {
+        content: "";
+        position: absolute;
+        right: -3px;
+        top: 25px;
+        width: 13px;
+        height: 52px;
+        border-radius: 0 0 12px 12px;
+        background: var(--glowin-charcoal);
+    }
+
+
+/* =========================================================
+   NECK
+   ========================================================= */
+
+.glowinloader__neck {
+    position: absolute;
+    z-index: 1;
+    top: 58px;
+    left: 50%;
+    width: 14px;
+    height: 18px;
+    transform: translateX(-50%);
+    background: var(--glowin-skin-shadow);
+}
+
+
+/* =========================================================
+   BODY
+   ========================================================= */
+
+.glowinloader__body {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 65px;
+    height: 82px;
+    transform: translateX(-50%);
+    border-radius: 35px 35px 10px 10px;
+    background: var(--glowin-forest);
+}
+
+
+/* =========================================================
+   WOMAN CLOTHING
+   ========================================================= */
+
+.glowinloader__woman
+.glowinloader__body {
+    width: 64px;
+    background: var(--glowin-sage);
+    border-radius: 38px 38px 12px 12px;
+}
+
+
+/* =========================================================
+   MAN CLOTHING
+   ========================================================= */
+
+.glowinloader__man
+.glowinloader__body {
+    background: var(--glowin-forest);
+}
+
+
+/* =========================================================
+   BOTANICAL GLOW
+   ========================================================= */
+
+.glowinloader__glow {
+    position: absolute;
+    z-index: 1;
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    background: radial-gradient( circle, rgba( 168, 181, 160, 0.22 ), transparent 70% );
+    animation: glowinloaderGlow 2.8s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   LOADING MESSAGE
+   ========================================================= */
+
+.glowinloader__message {
+    margin-top: clamp( 22px, 4vw, 30px );
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp( 16px, 3vw, 19px );
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: var(--glowin-forest);
+}
+
+
+/* =========================================================
+   SUB MESSAGE
+   ========================================================= */
+
+.glowinloader__submessage {
+    max-width: 90vw;
+    margin-top: 7px;
+    font-family: "DM Sans", sans-serif;
+    font-size: clamp( 11px, 2vw, 13px );
+    font-weight: 400;
+    letter-spacing: 0.35px;
+    color: var(--glowin-botanical);
+}
+
+
+/* =========================================================
+   PROGRESS BAR
+   ========================================================= */
+
+.glowinloader__progress {
+    width: clamp( 120px, 35vw, 150px );
+    height: 2px;
+    margin-top: 22px;
+    overflow: hidden;
+    background: rgba( 82, 107, 89, 0.15 );
+}
+
+
+    /* Progress */
+
+    .glowinloader__progress span {
+        display: block;
+        width: 45%;
+        height: 100%;
+        background: var(--glowin-gold);
+        animation: glowinloaderProgress 1.5s ease-in-out infinite;
+    }
+
+
+/* =========================================================
+   ANIMATION - ORBIT
+   ========================================================= */
+
+@keyframes glowinloaderOrbit {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =========================================================
+   ANIMATION - GLOW
+   ========================================================= */
+
+@keyframes glowinloaderGlow {
+
+    0%, 100% {
+        transform: scale(0.90);
+        opacity: 0.55;
+    }
+
+    50% {
+        transform: scale(1.12);
+        opacity: 1;
+    }
+}
+
+
+/* =========================================================
+   ANIMATION - PROGRESS
+   ========================================================= */
+
+@keyframes glowinloaderProgress {
+
+    0% {
+        transform: translateX(-130%);
+    }
+
+    50% {
+        transform: translateX(120%);
+    }
+
+    100% {
+        transform: translateX(300%);
+    }
+}
+/*Medium Screen*/
+
+@media (max-height: 600px) {
+
+    .glowinloader {
+        align-items: flex-start;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        overflow-y: auto;
+    }
+
+    .glowinloader__content {
+        margin: auto 0;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    .glowinloader {
+        padding: 15px;
+    }
+
+
+    .glowinloader__visual {
+        width: 165px;
+        height: 165px;
+    }
+
+
+    .glowinloader__people {
+        transform: scale(0.78);
+    }
+
+
+    .glowinloader__inner-circle {
+        width: 112px;
+        height: 112px;
+    }
+
+
+    .glowinloader__message {
+        margin-top: 18px;
+    }
+}
+
+
+/* =========================================================
+   TABLETS
+   ========================================================= */
+
+@media (min-width: 768px) {
+
+    .glowinloader__content {
+        max-width: 460px;
+    }
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   ========================================================= */
+
+@media (min-width: 1400px) {
+
+    .glowinloader__content {
+        max-width: 500px;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   Accessibility
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .glowinloader__orbit,
+    .glowinloader__glow,
+    .glowinloader__progress span {
+        animation: none;
+    }
+
+    .glowinloader {
+        transition: none;
+    }
+}
+
+
+/* =========================================================
+   GLOWIN PREMIUM ENTRANCE ANIMATIONS
+   ========================================================= */
+
+.glowinloader__brand {
+    animation: glowinloaderBrandIn 1.2s cubic-bezier(.22, 1, .36, 1) both;
+}
+
+
+.glowinloader__visual {
+    animation: glowinloaderVisualIn 1.4s cubic-bezier(.22, 1, .36, 1) 0.15s both;
+}
+
+
+.glowinloader__message {
+    animation: glowinloaderTextIn 1s ease 0.5s both;
+}
+
+
+.glowinloader__submessage {
+    animation: glowinloaderTextIn 1s ease 0.7s both;
+}
+
+
+.glowinloader__progress {
+    animation: glowinloaderTextIn 1s ease 0.9s both;
+}
+
+
+/* =========================================================
+   BRAND ENTRANCE
+   ========================================================= */
+
+@keyframes glowinloaderBrandIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+        letter-spacing: 5px;
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        letter-spacing: 1.5px;
+    }
+}
+
+
+/* =========================================================
+   MAIN VISUAL ENTRANCE
+   ========================================================= */
+
+@keyframes glowinloaderVisualIn {
+
+    from {
+        opacity: 0;
+        transform: scale(0.75);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* =========================================================
+   TEXT ENTRANCE
+   ========================================================= */
+
+@keyframes glowinloaderTextIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.glowinloader__people {
+    animation: glowinloaderPeopleBreath 3.5s ease-in-out infinite;
+}
+
+
+@keyframes glowinloaderPeopleBreath {
+
+    0%, 100% {
+        opacity: 0.94;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.glowinloader__leaf i {
+    display: block;
+    animation: glowinloaderLeafSway 2s ease-in-out infinite;
+}
+
+
+@keyframes glowinloaderLeafSway {
+
+    0%, 100% {
+        transform: rotate(-12deg) scale(0.95);
+    }
+
+    50% {
+        transform: rotate(12deg) scale(1.05);
+    }
+}

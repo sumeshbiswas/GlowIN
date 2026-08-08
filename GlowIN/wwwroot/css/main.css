@@ -122,10 +122,18 @@ body {
 .glowinloader__orbit {
     position: absolute;
     inset: 5px;
-    border: 1px solid rgba( 82, 107, 89, 0.28 );
+    border: 1px solid rgba(82, 107, 89, 0.28);
     border-radius: 50%;
-    animation: glowinloaderOrbit 4.5s linear infinite;
+    /*
+     * Positive rotation = clockwise.
+     * The entire orbit rotates clockwise,
+     * carrying the leaf around the circle.
+     */
+    animation: glowinloaderOrbit 7s linear infinite;
+    transform-origin: center center;
+    will-change: transform;
 }
+
 
 
     /* Second orbit */
@@ -134,31 +142,46 @@ body {
         content: "";
         position: absolute;
         inset: 17px;
-        border: 1px dashed rgba( 180, 154, 98, 0.28 );
+        border: 1px dashed rgba(180, 154, 98, 0.28);
         border-radius: 50%;
     }
+
 
 
 /* =========================================================
    LEAF
    ========================================================= */
-
 .glowinloader__leaf {
     position: absolute;
-    top: -15px;
+    /*
+     * Start at the top of the orbit.
+     */
+    top: -18px;
     left: 50%;
     width: 36px;
     height: 36px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: translateX(-50%) rotate(-20deg);
+    /*
+     * Keep the leaf centered on the orbit.
+     */
+    transform: translateX(-50%) rotate(0deg);
+    transform-origin: center center;
     color: var(--glowin-botanical);
     background: var(--glowin-ivory);
     border-radius: 50%;
-    font-size: 24px;
+    font-size: 23px;
     box-shadow: 0 3px 12px rgba(36, 56, 47, 0.08);
+    z-index: 10;
+    /*
+     * Counter-rotate the leaf so it stays upright
+     * while its parent orbit rotates clockwise.
+     */
+    animation: glowinloaderLeafCounterRotate 7s linear infinite;
+    will-change: transform;
 }
+
 
 
 /* =========================================================
@@ -448,6 +471,26 @@ body {
     }
 }
 
+/*
+ * The orbit rotates clockwise +360deg.
+ *
+ * The leaf rotates -360deg relative to its parent.
+ *
+ * Result:
+ *   - leaf travels clockwise around the circle
+ *   - leaf itself remains upright
+ */
+
+@keyframes glowinloaderLeafCounterRotate {
+
+    from {
+        transform: translateX(-50%) rotate(0deg);
+    }
+
+    to {
+        transform: translateX(-50%) rotate(-360deg);
+    }
+}
 
 /* =========================================================
    ANIMATION - GLOW
@@ -680,13 +723,13 @@ body {
     }
 }
 
+
 .glowinloader__leaf i {
     display: block;
-    animation: glowinloaderLeafSway 2s ease-in-out infinite;
 }
 
 
-@keyframes glowinloaderLeafSway {
+/*@keyframes glowinloaderLeafSway {
 
     0%, 100% {
         transform: rotate(-12deg) scale(0.95);
@@ -695,4 +738,4 @@ body {
     50% {
         transform: rotate(12deg) scale(1.05);
     }
-}
+}*/

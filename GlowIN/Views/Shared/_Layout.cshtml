@@ -22,6 +22,8 @@
           rel="stylesheet">
 
     <link rel="stylesheet" href="~/css/main.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/homepage.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/footer.css" asp-append-version="true" />
 </head>
 <body>
     
@@ -126,21 +128,579 @@
 
     </div>
 
-    <header>
-        
+    <!-- =========================================================
+     GLOWIN HOMEPAGE HEADER
+     ========================================================= -->
+
+    <header class="glowinhomepage-header">
+
+        <nav class="glowinhomepage-navbar">
+
+            <div class="glowinhomepage-container">
+
+                <a class="glowinhomepage-brand" href="/">
+                    <span class="glowinhomepage-brand-main">Glow</span>
+                    <span class="glowinhomepage-brand-accent">IN</span>
+                </a>
+
+                <div class="glowinhomepage-navigation">
+
+                    <a class="glowinhomepage-nav-link active" href="/">
+                        Home
+                    </a>
+
+                    <a class="glowinhomepage-nav-link"
+                       href="#about">
+                        About
+                    </a>
+
+                    <a class="glowinhomepage-nav-link"
+                       href="#products">
+                        Products
+                    </a>
+
+                    <a class="glowinhomepage-nav-link"
+                       href="#benefits">
+                        Benefits
+                    </a>
+
+                    <a class="glowinhomepage-nav-link"
+                       href="#contact">
+                        Contact
+                    </a>
+
+                </div>
+
+                <div class="glowinhomepage-actions">
+
+                    <a class="glowinhomepage-icon-button"
+                       href="#search"
+                       aria-label="Search">
+                        <i class="bi bi-search"></i>
+                    </a>
+
+                    <a class="glowinhomepage-icon-button"
+                       href="#account"
+                       aria-label="Account">
+                        <i class="bi bi-person"></i>
+                    </a>
+
+                    <a class="glowinhomepage-cta"
+                       href="#products">
+
+                        Explore
+                        <i class="bi bi-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+                <button class="glowinhomepage-mobile-toggle"
+                        type="button"
+                        aria-label="Open navigation"
+                        aria-expanded="false"
+                        aria-controls="glowinhomepageMobileMenu">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </button>
+
+            </div>
+
+        </nav>
+
+
+        <div class="glowinhomepage-mobile-menu"
+             id="glowinhomepageMobileMenu">
+
+            <div class="glowinhomepage-mobile-menu-inner">
+
+                <a class="glowinhomepage-mobile-link"
+                   asp-area=""
+                   asp-controller="Home"
+                   asp-action="Index">
+                    Home
+                </a>
+
+                <a class="glowinhomepage-mobile-link"
+                   href="#about">
+                    About
+                </a>
+
+                <a class="glowinhomepage-mobile-link"
+                   href="#products">
+                    Products
+                </a>
+
+                <a class="glowinhomepage-mobile-link"
+                   href="#benefits">
+                    Benefits
+                </a>
+
+                <a class="glowinhomepage-mobile-link"
+                   href="#contact">
+                    Contact
+                </a>
+
+                <a class="glowinhomepage-mobile-cta"
+                   href="#products">
+
+                    Explore Products
+                    <i class="bi bi-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
     </header>
+
+
     <div class="container">
+
         <main role="main" class="pb-3">
+
             @RenderBody()
-           
+
         </main>
+
     </div>
 
-    <footer>
-        <div class="container">
-            &copy; 2026 - GlowIN - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+
+    <!-- =========================================================
+      GLOWIN PREMIUM FOOTER
+      ========================================================= -->
+
+    <footer class="glowinfooter">
+
+        <!-- Decorative Botanical Elements -->
+        <div class="glowinfooter__decoration glowinfooter__decoration--left">
+            <i class="bi bi-leaf-fill"></i>
         </div>
+
+        <div class="glowinfooter__decoration glowinfooter__decoration--right">
+            <i class="bi bi-leaf-fill"></i>
+        </div>
+
+
+        <div class="glowinfooter__container">
+
+            <!-- =====================================================
+                 MAIN FOOTER
+                 ===================================================== -->
+
+            <div class="glowinfooter__main">
+
+                <!-- BRAND -->
+                <div class="glowinfooter__brand-column">
+
+                    <a href="/" class="glowinfooter__brand">
+                        <span class="glowinfooter__brand-main">Glow</span><span class="glowinfooter__brand-accent">IN</span>
+                    </a>
+
+                    <p class="glowinfooter__description">
+                        Naturally beautiful skincare,
+                        thoughtfully crafted with botanical
+                        ingredients for healthy, radiant skin.
+                    </p>
+
+                    <div class="glowinfooter__social">
+
+                        <a href="#"
+                           class="glowinfooter__social-link"
+                           aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+
+                        <a href="#"
+                           class="glowinfooter__social-link"
+                           aria-label="Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+
+                        <a href="#"
+                           class="glowinfooter__social-link"
+                           aria-label="Pinterest">
+                            <i class="bi bi-pinterest"></i>
+                        </a>
+
+                        <a href="#"
+                           class="glowinfooter__social-link"
+                           aria-label="YouTube">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SHOP -->
+                <div class="glowinfooter__column">
+
+                    <h3 class="glowinfooter__title">
+                        Shop
+                    </h3>
+
+                    <ul class="glowinfooter__links">
+
+                        <li>
+                            <a href="#products">
+                                All Products
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#products">
+                                Face Care
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#products">
+                                Body Care
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#products">
+                                Best Sellers
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#products">
+                                New Arrivals
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- INFORMATION -->
+                <div class="glowinfooter__column">
+
+                    <h3 class="glowinfooter__title">
+                        Explore
+                    </h3>
+
+                    <ul class="glowinfooter__links">
+
+                        <li>
+                            <a href="#about">
+                                About GlowIN
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#benefits">
+                                Our Ingredients
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#benefits">
+                                Skin Benefits
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#contact">
+                                Contact Us
+                            </a>
+                        </li>
+
+                        <li>
+                            <a asp-area=""
+                               asp-controller="Home"
+                               asp-action="Privacy">
+                                Privacy Policy
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- CONTACT -->
+                <div class="glowinfooter__column glowinfooter__contact-column">
+
+                    <h3 class="glowinfooter__title">
+                        Get in Touch
+                    </h3>
+
+                    <div class="glowinfooter__contact">
+
+                        <a href="mailto:hello@glowin.com"
+                           class="glowinfooter__contact-item">
+
+                            <span class="glowinfooter__contact-icon">
+                                <i class="bi bi-envelope"></i>
+                            </span>
+
+                            <span>
+                                hello@glowin.com
+                            </span>
+
+                        </a>
+
+
+                        <a href="tel:+919876543210"
+                           class="glowinfooter__contact-item">
+
+                            <span class="glowinfooter__contact-icon">
+                                <i class="bi bi-telephone"></i>
+                            </span>
+
+                            <span>
+                                +91 98765 43210
+                            </span>
+
+                        </a>
+
+
+                        <div class="glowinfooter__contact-item">
+
+                            <span class="glowinfooter__contact-icon">
+                                <i class="bi bi-clock"></i>
+                            </span>
+
+                            <span>
+                                Mon – Sat<br>
+                                9:00 AM – 6:00 PM
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================================
+                 NEWSLETTER STRIP
+                 ===================================================== -->
+
+            <div class="glowinfooter__newsletter">
+
+                <div class="glowinfooter__newsletter-content">
+
+                    <span class="glowinfooter__newsletter-label">
+                        STAY NATURALLY GLOWING
+                    </span>
+
+                    <h3 class="glowinfooter__newsletter-title">
+                        Get skincare tips &amp; exclusive offers.
+                    </h3>
+
+                </div>
+
+
+                <form class="glowinfooter__newsletter-form">
+
+                    <div class="glowinfooter__input-wrapper">
+
+                        <i class="bi bi-envelope"></i>
+
+                        <input type="email"
+                               class="glowinfooter__input"
+                               placeholder="Enter your email"
+                               aria-label="Email address"
+                               required />
+
+                    </div>
+
+                    <button type="submit"
+                            class="glowinfooter__subscribe">
+
+                        Subscribe
+
+                        <i class="bi bi-arrow-right"></i>
+
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- =====================================================
+                 BOTTOM BAR
+                 ===================================================== -->
+
+            <div class="glowinfooter__bottom">
+
+                <p class="glowinfooter__copyright">
+                    © 2026 GlowIN. All rights reserved.
+                </p>
+
+
+                <div class="glowinfooter__legal">
+
+                    <a href="#">
+                        Privacy Policy
+                    </a>
+
+                    <span></span>
+
+                    <a href="#">
+                        Terms of Use
+                    </a>
+
+                    <span></span>
+
+                    <a href="#">
+                        Shipping
+                    </a>
+
+                    <span></span>
+
+                    <a href="#">
+                        Returns
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
     </footer>
+
+    <script>
+                /* =========================================================
+           GLOWIN HOMEPAGE MOBILE NAVIGATION
+           ========================================================= */
+
+        (function () {
+
+            "use strict";
+
+            const toggle =
+                document.querySelector(
+                    ".glowinhomepage-mobile-toggle"
+                );
+
+            const menu =
+                document.getElementById(
+                    "glowinhomepageMobileMenu"
+                );
+
+            if (!toggle || !menu) {
+                return;
+            }
+
+
+            toggle.addEventListener("click", function () {
+
+                const isOpen =
+                    menu.classList.toggle(
+                        "glowinhomepage-menu-open"
+                    );
+
+                toggle.classList.toggle(
+                    "glowinhomepage-toggle-active",
+                    isOpen
+                );
+
+                toggle.setAttribute(
+                    "aria-expanded",
+                    isOpen ? "true" : "false"
+                );
+
+                toggle.setAttribute(
+                    "aria-label",
+                    isOpen
+                        ? "Close navigation"
+                        : "Open navigation"
+                );
+
+            });
+
+
+            /*
+             * Close mobile navigation
+             * after selecting a menu item.
+             */
+
+            const mobileLinks =
+                menu.querySelectorAll(
+                    ".glowinhomepage-mobile-link, " +
+                    ".glowinhomepage-mobile-cta"
+                );
+
+
+            mobileLinks.forEach(function (link) {
+
+                link.addEventListener("click", function () {
+
+                    menu.classList.remove(
+                        "glowinhomepage-menu-open"
+                    );
+
+                    toggle.classList.remove(
+                        "glowinhomepage-toggle-active"
+                    );
+
+                    toggle.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                    toggle.setAttribute(
+                        "aria-label",
+                        "Open navigation"
+                    );
+
+                });
+
+            });
+
+
+            /*
+             * Close menu when resizing
+             * back to desktop.
+             */
+
+            window.addEventListener(
+                "resize",
+                function () {
+
+                    if (window.innerWidth > 767) {
+
+                        menu.classList.remove(
+                            "glowinhomepage-menu-open"
+                        );
+
+                        toggle.classList.remove(
+                            "glowinhomepage-toggle-active"
+                        );
+
+                        toggle.setAttribute(
+                            "aria-expanded",
+                            "false"
+                        );
+
+                        toggle.setAttribute(
+                            "aria-label",
+                            "Open navigation"
+                        );
+
+                    }
+
+                }
+            );
+
+        })();
+        </script>
 
     <!-- Bootstrap 5.3.8 JavaScript -->
     <!-- Includes Popper -->

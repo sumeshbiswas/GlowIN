@@ -1,0 +1,781 @@
+/* =========================================================
+   GLOWIN PREMIUM FOOTER
+   Botanical Luxury
+   ========================================================= */
+
+.glowinfooter {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    color: var(--glowin-white);
+    background: var(--glowin-charcoal);
+    font-family: "DM Sans", sans-serif;
+    isolation: isolate;
+    border-top: 1px solid rgba(180, 154, 98, 0.12);
+    background-image: radial-gradient( circle at 20% 20%, rgba(255, 255, 255, 0.018) 0, transparent 45% ), radial-gradient( circle at 80% 70%, rgba(180, 154, 98, 0.018) 0, transparent 40% );
+}
+
+    /* =========================================================
+   FADED BOTANICAL BACKGROUND IMAGE
+   ========================================================= */
+
+    .glowinfooter::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 99;
+        background-image: url("../Images/footerimg.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0.25;
+        /*filter: grayscale(100%) contrast(0.85) brightness(0.65);*/
+        transform: scale(1.04);
+        pointer-events: none;
+    }
+
+    /* =========================================================
+   DARK OVERLAY
+   Keeps the image extremely subtle
+   ========================================================= */
+
+    .glowinfooter::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: radial-gradient( circle at 15% 30%, rgba(82, 107, 89, 0.16), transparent 32% ), radial-gradient( circle at 85% 20%, rgba(180, 154, 98, 0.08), transparent 25% ), linear-gradient( 90deg, rgba(37, 39, 36, 0.25), rgba(37, 39, 36, 0.72) );
+        pointer-events: none;
+    }
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.glowinfooter__container {
+    position: relative;
+    z-index: 2;
+    width: min(100% - 40px, 1280px);
+    margin: 0 auto;
+}
+
+    /* =========================================================
+   LUXURY GOLD AMBIENT LIGHT
+   ========================================================= */
+
+    .glowinfooter__container::before {
+        content: "";
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        width: 420px;
+        height: 420px;
+        transform: translateX(-50%);
+        border-radius: 50%;
+        background: radial-gradient( circle, rgba(180, 154, 98, 0.075) 0%, rgba(180, 154, 98, 0.025) 35%, transparent 70% );
+        pointer-events: none;
+        z-index: -1;
+    }
+
+/* =========================================================
+   MAIN FOOTER
+   ========================================================= */
+
+.glowinfooter__main {
+    display: grid;
+    grid-template-columns: 1.7fr 1fr 1fr 1.2fr;
+    gap: clamp(35px, 5vw, 90px);
+    padding: clamp(60px, 8vw, 90px) 0 clamp(45px, 6vw, 65px);
+}
+    .glowinfooter__main::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 70px;
+        height: 1px;
+        transform: translateX(-50%);
+        background: linear-gradient( 90deg, transparent, var(--glowin-gold), transparent );
+        opacity: 0.7;
+    }
+
+/* =========================================================
+   SUBTLE LUXURY TEXTURE
+   ========================================================= */
+
+.glowinfooter__main,
+.glowinfooter__newsletter,
+.glowinfooter__bottom {
+    position: relative;
+}
+
+/* =========================================================
+   BRAND COLUMN
+   ========================================================= */
+
+.glowinfooter__brand-column {
+    max-width: 360px;
+}
+
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.glowinfooter__brand {
+    display: inline-flex;
+    align-items: baseline;
+    text-decoration: none;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(28px, 4vw, 36px);
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 1px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+
+    .glowinfooter__brand:hover {
+        opacity: 0.85;
+        transform: translateY(-1px);
+    }
+
+
+.glowinfooter__brand-main {
+    color: var(--glowin-white);
+}
+
+
+.glowinfooter__brand-accent {
+    color: var(--glowin-gold);
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.glowinfooter__description {
+    max-width: 330px;
+    margin: 22px 0 0;
+    color: rgba(255, 255, 255, 0.62);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.8;
+    letter-spacing: 0.15px;
+}
+
+
+/* =========================================================
+   SOCIAL
+   ========================================================= */
+
+.glowinfooter__social {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-top: 27px;
+}
+
+
+.glowinfooter__social-link {
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 50%;
+    color: rgba(255, 255, 255, 0.78);
+    text-decoration: none;
+    transition: color 0.3s ease, background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+
+    .glowinfooter__social-link:hover {
+        color: var(--glowin-charcoal);
+        background: var(--glowin-gold);
+        border-color: var(--glowin-gold);
+        transform: translateY(-3px);
+    }
+
+
+    .glowinfooter__social-link i {
+        font-size: 14px;
+    }
+
+
+/* =========================================================
+   FOOTER COLUMN
+   ========================================================= */
+
+.glowinfooter__column {
+    min-width: 0;
+}
+
+
+/* =========================================================
+   COLUMN TITLE
+   ========================================================= */
+
+.glowinfooter__title {
+    margin: 4px 0 23px;
+    color: var(--glowin-white);
+    font-family: "DM Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+.glowinfooter__links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+    .glowinfooter__links li {
+        margin-bottom: 13px;
+    }
+
+
+    .glowinfooter__links a {
+        position: relative;
+        display: inline-block;
+        color: rgba(255, 255, 255, 0.58);
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 1.5;
+        text-decoration: none;
+        transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+
+        .glowinfooter__links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+            width: 0;
+            height: 1px;
+            background: var(--glowin-gold);
+            transition: width 0.3s ease;
+        }
+
+
+        .glowinfooter__links a:hover {
+            color: var(--glowin-white);
+            transform: translateX(3px);
+        }
+
+
+            .glowinfooter__links a:hover::after {
+                width: 100%;
+            }
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.glowinfooter__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+
+.glowinfooter__contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    color: rgba(255, 255, 255, 0.62);
+    font-size: 13px;
+    line-height: 1.6;
+    text-decoration: none;
+}
+
+
+a.glowinfooter__contact-item {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+
+    a.glowinfooter__contact-item:hover {
+        color: var(--glowin-white);
+        transform: translateX(3px);
+    }
+
+
+.glowinfooter__contact-icon {
+    width: 27px;
+    height: 27px;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--glowin-gold);
+    border: 1px solid rgba(180, 154, 98, 0.25);
+    border-radius: 50%;
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   NEWSLETTER
+   ========================================================= */
+
+.glowinfooter__newsletter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 28px clamp(22px, 4vw, 40px);
+    position: relative;
+    background: linear-gradient( 110deg, rgba(82, 107, 89, 0.14), rgba(255, 255, 255, 0.025) );
+    border-top: 1px solid rgba(180, 154, 98, 0.16);
+    border-bottom: 1px solid rgba(180, 154, 98, 0.16);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.025);
+}
+
+
+/* =========================================================
+   NEWSLETTER CONTENT
+   ========================================================= */
+
+.glowinfooter__newsletter-content {
+    min-width: 0;
+}
+
+
+.glowinfooter__newsletter-label {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--glowin-gold);
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+}
+
+
+.glowinfooter__newsletter-title {
+    margin: 0;
+    color: var(--glowin-white);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(17px, 2.2vw, 21px);
+    font-weight: 400;
+    line-height: 1.35;
+}
+
+
+/* =========================================================
+   NEWSLETTER FORM
+   ========================================================= */
+
+.glowinfooter__newsletter-form {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    width: min(100%, 420px);
+    padding: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.055);
+}
+
+
+/* =========================================================
+   INPUT WRAPPER
+   ========================================================= */
+
+.glowinfooter__input-wrapper {
+    min-width: 0;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding-left: 12px;
+}
+
+
+    .glowinfooter__input-wrapper i {
+        flex-shrink: 0;
+        color: var(--glowin-gold);
+        font-size: 13px;
+    }
+
+
+.glowinfooter__input {
+    width: 100%;
+    min-width: 0;
+    height: 40px;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    color: var(--glowin-white);
+    background: transparent;
+    font-family: "DM Sans", sans-serif;
+    font-size: 12px;
+}
+
+
+    .glowinfooter__input::placeholder {
+        color: rgba(255, 255, 255, 0.42);
+    }
+
+
+/* =========================================================
+   SUBSCRIBE BUTTON
+   ========================================================= */
+
+.glowinfooter__subscribe {
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 17px;
+    border: 1px solid var(--glowin-gold);
+    border-radius: 2px;
+    color: var(--glowin-charcoal);
+    background: var(--glowin-gold);
+    font-family: "DM Sans", sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+
+    .glowinfooter__subscribe:hover {
+        color: var(--glowin-white);
+        background: var(--glowin-botanical);
+        border-color: var(--glowin-botanical);
+        transform: translateX(2px);
+    }
+
+
+    .glowinfooter__subscribe i {
+        font-size: 12px;
+        transition: transform 0.3s ease;
+    }
+
+
+    .glowinfooter__subscribe:hover i {
+        transform: translateX(3px);
+    }
+
+
+/* =========================================================
+   BOTTOM BAR
+   ========================================================= */
+
+.glowinfooter__bottom {
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+
+.glowinfooter__copyright {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.42);
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+
+.glowinfooter__legal {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 13px;
+}
+
+
+    .glowinfooter__legal a {
+        color: rgb(255 255 255 / 60%);
+        font-size: 11px;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+
+        .glowinfooter__legal a:hover {
+            color: var(--glowin-gold);
+        }
+
+
+    .glowinfooter__legal span {
+        width: 2px;
+        height: 2px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.22);
+    }
+
+
+/* =========================================================
+   BOTANICAL DECORATIONS
+   ========================================================= */
+
+.glowinfooter__decoration {
+    position: absolute;
+    z-index: 0;
+    color: var(--glowin-sage);
+    opacity: 0.055;
+    pointer-events: none;
+    filter: blur(0.2px);
+}
+
+
+    .glowinfooter__decoration i {
+        display: block;
+        font-size: 210px;
+    }
+
+
+/* LEFT */
+
+.glowinfooter__decoration--left {
+    left: -80px;
+    bottom: -65px;
+    transform: rotate(-25deg);
+}
+
+
+/* RIGHT */
+
+.glowinfooter__decoration--right {
+    right: -70px;
+    top: -80px;
+    transform: rotate(145deg);
+}
+
+/* =========================================================
+   LARGE DESKTOP
+   ========================================================= */
+
+@media (min-width: 1400px) {
+
+    .glowinfooter__container {
+        width: min(100% - 60px, 1380px);
+    }
+
+    .glowinfooter__main {
+        gap: 100px;
+    }
+}
+
+
+/* =========================================================
+   TABLET / SMALL DESKTOP
+   ========================================================= */
+
+@media (max-width: 991.98px) {
+
+    .glowinfooter__main {
+        grid-template-columns: 1.5fr 1fr 1fr;
+        gap: 45px 35px;
+    }
+
+
+    .glowinfooter__brand-column {
+        grid-column: span 3;
+        max-width: 500px;
+    }
+
+
+    .glowinfooter__newsletter {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+
+    .glowinfooter__newsletter-form {
+        width: min(100%, 500px);
+    }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 767.98px) {
+
+    .glowinfooter__container {
+        width: min(100% - 30px, 680px);
+    }
+
+
+    .glowinfooter__main {
+        grid-template-columns: 1fr 1fr;
+        gap: 38px 30px;
+        padding-top: 55px;
+    }
+
+
+    .glowinfooter__brand-column {
+        grid-column: span 2;
+        max-width: 100%;
+    }
+
+
+    .glowinfooter__newsletter {
+        padding: 25px 20px;
+    }
+
+
+    .glowinfooter__bottom {
+        min-height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 22px 0;
+        gap: 15px;
+    }
+
+
+    .glowinfooter__legal {
+        justify-content: flex-start;
+    }
+
+
+    .glowinfooter__decoration i {
+        font-size: 130px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 575.98px) {
+
+    .glowinfooter__container {
+        width: calc(100% - 30px);
+    }
+
+
+    .glowinfooter__main {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding-top: 48px;
+    }
+
+
+    .glowinfooter__brand-column {
+        grid-column: auto;
+    }
+
+
+    .glowinfooter__newsletter {
+        padding: 24px 16px;
+    }
+
+
+    .glowinfooter__newsletter-form {
+        width: 100%;
+        flex-direction: column;
+        gap: 7px;
+        padding: 5px;
+    }
+
+
+    .glowinfooter__input-wrapper {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+
+    .glowinfooter__subscribe {
+        width: 100%;
+    }
+
+
+    .glowinfooter__legal {
+        gap: 10px;
+    }
+
+
+        .glowinfooter__legal span {
+            display: none;
+        }
+
+
+        .glowinfooter__legal a {
+            padding-right: 4px;
+        }
+
+
+    .glowinfooter__decoration {
+        opacity: 0.06;
+    }
+
+
+        .glowinfooter__decoration i {
+            font-size: 100px;
+        }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    .glowinfooter__container {
+        width: calc(100% - 24px);
+    }
+
+
+    .glowinfooter__description {
+        font-size: 12px;
+    }
+
+
+    .glowinfooter__social-link {
+        width: 34px;
+        height: 34px;
+    }
+
+
+    .glowinfooter__newsletter-title {
+        font-size: 16px;
+    }
+
+
+    .glowinfooter__legal {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .glowinfooter__brand,
+    .glowinfooter__social-link,
+    .glowinfooter__links a,
+    .glowinfooter__contact-item,
+    .glowinfooter__subscribe {
+        transition: none;
+    }
+}

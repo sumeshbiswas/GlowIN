@@ -46,8 +46,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow-y: auto;
-    overflow-x: hidden;
+    /*overflow-y: auto;
+    overflow-x: hidden;*/
+    overflow: hidden;
     background: radial-gradient( circle at center, var(--glowin-white) 0%, var(--glowin-ivory) 52%, var(--glowin-cream) 100% );
     opacity: 1;
     visibility: visible;

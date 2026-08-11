@@ -1,0 +1,508 @@
+:root {
+    /* Primary Brand */
+    --glowin-forest: #24382F;
+    --glowin-botanical: #526B59;
+    --glowin-sage: #A8B5A0;
+    /* Background */
+    --glowin-ivory: #F8F5EE;
+    --glowin-cream: #EEE8DA;
+    /* Premium Accent */
+    --glowin-gold: #B49A62;
+    /* Text */
+    --glowin-charcoal: #252724;
+    /* White */
+    --glowin-white: #FFFFFF;
+    /* Skin tones */
+    --glowin-skin: #D8B59C;
+    --glowin-skin-shadow: #C99C81;
+}
+
+/* =========================================================
+   GLOWIN HOMEPAGE HEADER
+   Botanical Luxury
+   ========================================================= */
+
+.glowinhomepage-header {
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+    background: var(--glowin-ivory);
+}
+
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.glowinhomepage-navbar {
+    position: relative;
+    width: 100%;
+    background: rgba(248, 245, 238, 0.96);
+    border-bottom: 1px solid rgba(180, 154, 98, 0.18);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.glowinhomepage-container {
+    width: min(100% - 40px, 1280px);
+    min-height: 82px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.glowinhomepage-brand {
+    display: inline-flex;
+    align-items: baseline;
+    flex-shrink: 0;
+    text-decoration: none;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 1;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+
+    .glowinhomepage-brand:hover {
+        transform: translateY(-1px);
+        opacity: 0.9;
+    }
+
+
+.glowinhomepage-brand-main {
+    color: var(--glowin-forest);
+}
+
+
+.glowinhomepage-brand-accent {
+    color: var(--glowin-gold);
+}
+
+
+/* =========================================================
+   DESKTOP NAVIGATION
+   ========================================================= */
+
+.glowinhomepage-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(20px, 3vw, 42px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.glowinhomepage-nav-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding: 31px 0;
+    color: var(--glowin-charcoal);
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+
+    .glowinhomepage-nav-link::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 21px;
+        width: 0;
+        height: 1px;
+        transform: translateX(-50%);
+        background: var(--glowin-gold);
+        transition: width 0.3s ease;
+    }
+
+
+    .glowinhomepage-nav-link:hover {
+        color: var(--glowin-botanical);
+    }
+
+
+        .glowinhomepage-nav-link:hover::after,
+        .glowinhomepage-nav-link.active::after {
+            width: 22px;
+        }
+
+
+    .glowinhomepage-nav-link.active {
+        color: var(--glowin-forest);
+        font-weight: 600;
+    }
+
+
+/* =========================================================
+   RIGHT ACTIONS
+   ========================================================= */
+
+.glowinhomepage-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   ICON BUTTON
+   ========================================================= */
+
+.glowinhomepage-icon-button {
+    width: 38px;
+    height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(36, 56, 47, 0.10);
+    border-radius: 50%;
+    color: var(--glowin-forest);
+    background: transparent;
+    text-decoration: none;
+    transition: color 0.3s ease, background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+
+    .glowinhomepage-icon-button:hover {
+        color: var(--glowin-white);
+        background: var(--glowin-forest);
+        border-color: var(--glowin-forest);
+        transform: translateY(-1px);
+    }
+
+
+    .glowinhomepage-icon-button i {
+        font-size: 15px;
+    }
+
+
+/* =========================================================
+   PRIMARY CTA
+   ========================================================= */
+
+.glowinhomepage-cta {
+    min-height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 0 19px;
+    border: 1px solid var(--glowin-forest);
+    border-radius: 2px;
+    color: var(--glowin-white);
+    background: var(--glowin-forest);
+    font-family: "DM Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+    transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+    .glowinhomepage-cta:hover {
+        color: var(--glowin-white);
+        background: var(--glowin-botanical);
+        border-color: var(--glowin-botanical);
+        transform: translateY(-1px);
+        box-shadow: 0 8px 20px rgba(36, 56, 47, 0.12);
+    }
+
+
+    .glowinhomepage-cta i {
+        font-size: 14px;
+        transition: transform 0.3s ease;
+    }
+
+
+    .glowinhomepage-cta:hover i {
+        transform: translateX(3px);
+    }
+
+
+/* =========================================================
+   MOBILE TOGGLE
+   ========================================================= */
+
+.glowinhomepage-mobile-toggle {
+    display: none;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    border: 1px solid rgba(36, 56, 47, 0.12);
+    border-radius: 50%;
+    background: transparent;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+
+    .glowinhomepage-mobile-toggle span {
+        display: block;
+        width: 17px;
+        height: 1.5px;
+        background: var(--glowin-forest);
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+
+/* =========================================================
+   MOBILE MENU
+   ========================================================= */
+
+.glowinhomepage-mobile-menu {
+    display: none;
+    width: 100%;
+    background: var(--glowin-ivory);
+    border-bottom: 1px solid rgba(180, 154, 98, 0.18);
+    box-shadow: 0 12px 30px rgba(36, 56, 47, 0.06);
+}
+
+
+.glowinhomepage-mobile-menu-inner {
+    width: min(100% - 40px, 1280px);
+    margin: 0 auto;
+    padding: 10px 0 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.glowinhomepage-mobile-link {
+    padding: 15px 5px;
+    border-bottom: 1px solid rgba(36, 56, 47, 0.07);
+    color: var(--glowin-charcoal);
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+
+    .glowinhomepage-mobile-link:hover {
+        padding-left: 10px;
+        color: var(--glowin-botanical);
+    }
+
+
+/* =========================================================
+   MOBILE CTA
+   ========================================================= */
+
+.glowinhomepage-mobile-cta {
+    margin-top: 18px;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: var(--glowin-white);
+    background: var(--glowin-forest);
+    border: 1px solid var(--glowin-forest);
+    font-family: "DM Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+
+    .glowinhomepage-mobile-cta:hover {
+        color: var(--glowin-white);
+        background: var(--glowin-botanical);
+    }
+
+
+/* =========================================================
+   MOBILE MENU OPEN STATE
+   ========================================================= */
+
+.glowinhomepage-mobile-menu.glowinhomepage-menu-open {
+    display: block;
+}
+
+
+.glowinhomepage-mobile-toggle.glowinhomepage-toggle-active span:nth-child(1) {
+    transform: translateY(6.5px) rotate(45deg);
+}
+
+
+.glowinhomepage-mobile-toggle.glowinhomepage-toggle-active span:nth-child(2) {
+    opacity: 0;
+}
+
+
+.glowinhomepage-mobile-toggle.glowinhomepage-toggle-active span:nth-child(3) {
+    transform: translateY(-6.5px) rotate(-45deg);
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   ========================================================= */
+
+@media (min-width: 1400px) {
+
+    .glowinhomepage-container {
+        min-height: 88px;
+    }
+
+    .glowinhomepage-brand {
+        font-size: 32px;
+    }
+
+    .glowinhomepage-nav-link {
+        font-size: 14px;
+    }
+}
+
+
+/* =========================================================
+   TABLET / SMALL DESKTOP
+   ========================================================= */
+
+@media (max-width: 991.98px) {
+
+    .glowinhomepage-container {
+        min-height: 74px;
+    }
+
+    .glowinhomepage-navigation {
+        gap: 20px;
+    }
+
+    .glowinhomepage-nav-link {
+        font-size: 13px;
+    }
+
+    .glowinhomepage-actions {
+        gap: 6px;
+    }
+
+    .glowinhomepage-cta {
+        padding: 0 14px;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 767.98px) {
+
+    .glowinhomepage-container {
+        width: min(100% - 30px, 680px);
+        min-height: 70px;
+    }
+
+    .glowinhomepage-navigation,
+    .glowinhomepage-actions {
+        display: none;
+    }
+
+    .glowinhomepage-mobile-toggle {
+        display: flex;
+    }
+
+    .glowinhomepage-mobile-menu {
+        display: none;
+    }
+
+        .glowinhomepage-mobile-menu.glowinhomepage-menu-open {
+            display: block;
+        }
+
+    .glowinhomepage-brand {
+        font-size: 28px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 575.98px) {
+
+    .glowinhomepage-container {
+        width: calc(100% - 30px);
+        min-height: 66px;
+    }
+
+    .glowinhomepage-brand {
+        font-size: 26px;
+        letter-spacing: 0.8px;
+    }
+
+    .glowinhomepage-mobile-menu-inner {
+        width: calc(100% - 30px);
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    .glowinhomepage-container {
+        width: calc(100% - 24px);
+        min-height: 62px;
+    }
+
+    .glowinhomepage-brand {
+        font-size: 24px;
+    }
+
+    .glowinhomepage-mobile-toggle {
+        width: 38px;
+        height: 38px;
+    }
+
+    .glowinhomepage-mobile-menu-inner {
+        width: calc(100% - 24px);
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .glowinhomepage-brand,
+    .glowinhomepage-nav-link,
+    .glowinhomepage-icon-button,
+    .glowinhomepage-cta,
+    .glowinhomepage-mobile-link,
+    .glowinhomepage-mobile-toggle span {
+        transition: none;
+    }
+}

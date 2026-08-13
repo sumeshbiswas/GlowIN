@@ -33,7 +33,7 @@
     margin-bottom: 13px;
     color: var(--glowin-gold, #B49A62);
     font-family: "DM Sans", sans-serif;
-    font-size: 8px;
+    font-size: 10px;
     font-weight: 700;
     letter-spacing: 2.5px;
 }
@@ -78,7 +78,7 @@
     border-bottom: 1px solid var(--glowin-gold, #B49A62);
     color: var(--glowin-forest, #24382F);
     font-family: "DM Sans", sans-serif;
-    font-size: 8px;
+    font-size: 12px;
     font-weight: 700;
     letter-spacing: 1px;
     text-decoration: none;
@@ -126,7 +126,7 @@
     background: transparent;
     color: rgba(37,39,36,.55);
     font-family: "DM Sans", sans-serif;
-    font-size: 8px;
+    font-size: 12px;
     font-weight: 600;
     letter-spacing: .7px;
     cursor: pointer;
@@ -276,7 +276,7 @@
     margin-bottom: 7px;
     color: var(--glowin-gold, #B49A62);
     font-family: "DM Sans", sans-serif;
-    font-size: 6.5px;
+    font-size: 10px;
     font-weight: 700;
     letter-spacing: 1.5px;
     text-transform: uppercase;
@@ -291,20 +291,20 @@
     .glowinproducts__name a {
         color: var(--glowin-forest, #24382F);
         font-family: "Playfair Display", Georgia, serif;
-        font-size: 21px;
-        font-weight: 400;
+        font-size: 20px;
+        font-weight: 600;
         line-height: 1.15;
         text-decoration: none;
     }
 
 
 .glowinproducts__description {
-    height: 36px;
-    margin: 10px 0 12px;
+    height: 20px;
+    margin: 8px 0 10px;
     overflow: hidden;
-    color: rgba(37,39,36,.52);
+    color: rgb(30 30 30);
     font-family: "DM Sans", sans-serif;
-    font-size: 8px;
+    font-size: 10px;
     line-height: 1.65;
 }
 
@@ -318,14 +318,14 @@
     align-items: center;
     gap: 5px;
     margin-bottom: 10px;
-    color: rgba(37,39,36,.42);
+    color: rgb(37 39 36 / 73%);
     font-family: "DM Sans", sans-serif;
-    font-size: 7px;
+    font-size: 10px;
 }
 
 
 .glowinproducts__stars {
-    color: var(--glowin-gold, #B49A62);
+    color: #ffae00;
     letter-spacing: 1px;
 }
 
@@ -344,15 +344,15 @@
 .glowinproducts__current-price {
     color: var(--glowin-forest, #24382F);
     font-family: "DM Sans", sans-serif;
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 700;
 }
 
 
 .glowinproducts__old-price {
-    color: rgba(37,39,36,.35);
+    color: rgb(23 24 22 / 52%);
     font-family: "DM Sans", sans-serif;
-    font-size: 8px;
+    font-size: 14px;
     text-decoration: line-through;
 }
 
@@ -384,7 +384,7 @@
     background: transparent;
     color: var(--glowin-forest, #24382F);
     font-family: "DM Sans", sans-serif;
-    font-size: 7px;
+    font-size: 11px;
     font-weight: 700;
     letter-spacing: .5px;
     text-decoration: none;

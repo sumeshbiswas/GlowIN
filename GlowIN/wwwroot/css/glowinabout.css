@@ -300,7 +300,7 @@
         margin-bottom: 8px;
         color: var(--glowin-gold);
         font-family: "DM Sans", sans-serif;
-        font-size: 8px;
+        font-size: 12px;
         letter-spacing: 1px;
     }
 
@@ -309,8 +309,8 @@
         display: block;
         color: var(--glowin-forest);
         font-family: "DM Sans", sans-serif;
-        font-size: 11px;
-        font-weight: 600;
+        font-size: 14px;
+        font-weight: 800;
         letter-spacing: 1.5px;
     }
 
@@ -318,9 +318,9 @@
     .glowinabout__philosophy-item small {
         display: block;
         margin-top: 3px;
-        color: rgba( 37, 39, 36, 0.55 );
+        color: rgb(33 34 33 / 77%);
         font-family: "DM Sans", sans-serif;
-        font-size: 10px;
+        font-size: 11px;
     }
 
 

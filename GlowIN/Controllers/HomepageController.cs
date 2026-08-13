@@ -37,7 +37,7 @@ namespace GlowIN.Controllers
 
                 ButtonUrl = "#products",
 
-                ImageUrl = "/Images/home/banner1.jpg",
+                ImageUrl = "/Images/home/banner1.png",
 
                 IsActive = true,
 

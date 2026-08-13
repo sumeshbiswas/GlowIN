@@ -7,7 +7,7 @@
     position: relative;
     width: 100%;
     overflow: hidden;
-    padding: 140px 0;
+    padding: 40px 0;
     background: radial-gradient( circle at 85% 20%, rgba(168, 181, 160, 0.14), transparent 30% ), var(--glowin-ivory);
 }
 

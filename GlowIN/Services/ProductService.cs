@@ -26,7 +26,7 @@ namespace GlowIN.Services
                         "A thoughtfully crafted botanical serum designed to hydrate, nourish and enhance your skin's natural glow.",
 
                     ImageUrl =
-                        "/Images/products/botanical-glow-serum.jpg",
+                        "/Images/Products/product1.jpg",
 
                     SecondaryImageUrl =
                         "/Images/products/botanical-glow-serum-2.jpg",
@@ -74,7 +74,7 @@ namespace GlowIN.Services
                         "A rich yet lightweight botanical cream created to nourish the skin and support a healthy-looking glow.",
 
                     ImageUrl =
-                        "/Images/products/herbal-radiance-cream.jpg",
+                        "/Images/products/product2.jpg",
 
                     SecondaryImageUrl =
                         "/Images/products/herbal-radiance-cream-2.jpg",
@@ -122,7 +122,7 @@ namespace GlowIN.Services
                         "A gentle everyday cleanser that removes impurities while maintaining the skin's natural comfort.",
 
                     ImageUrl =
-                        "/Images/products/botanical-cleanser.jpg",
+                        "/Images/products/product3.jpg",
 
                     SecondaryImageUrl =
                         "/Images/products/botanical-cleanser-2.jpg",
@@ -170,10 +170,10 @@ namespace GlowIN.Services
                         "A refreshing face mist designed to provide a light burst of botanical hydration throughout the day.",
 
                     ImageUrl =
-                        "/Images/products/sage-hydration-mist.jpg",
+                        "/Images/products/product4.jpg",
 
                     SecondaryImageUrl =
-                        "/Images/products/sage-hydration-mist-2.jpg",
+                        "/Images/products/product4(a).jpg",
 
                     Price = 499,
 

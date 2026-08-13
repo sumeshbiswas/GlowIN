@@ -6,7 +6,7 @@
 .glowinbenefits {
     position: relative;
     width: 100%;
-    padding: 60px 0;
+    padding: 40px 0;
     overflow: hidden;
     background: var(--glowin-cream);
 }
@@ -65,7 +65,7 @@
 
 .glowinbenefits__heading {
     max-width: 650px;
-    margin: 0 auto 80px;
+    margin: 0 auto 50px;
     text-align: center;
 }
 
@@ -126,7 +126,7 @@
 .glowinbenefits__layout {
     position: relative;
     width: min(100%, 1080px);
-    min-height: 520px;
+    min-height: 300px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 320px 1fr;

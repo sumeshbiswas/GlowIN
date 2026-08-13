@@ -396,6 +396,7 @@
     .glowinproducts__view-product:hover {
         background: var(--glowin-forest, #24382F);
         color: var(--glowin-ivory, #F8F5EE);
+        transform: translateY(-1px);
     }
 
 

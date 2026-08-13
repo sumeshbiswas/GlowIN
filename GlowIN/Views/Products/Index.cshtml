@@ -1,0 +1,27 @@
+﻿@model GlowIN.Models.Product
+
+@{
+    ViewData["Title"] = Model.ProductName;
+}
+
+<h1 class="glowinproductdetails__title">
+
+    @Model.ProductName
+
+</h1>
+
+<p class="glowinproductdetails__short-description">
+
+    @Model.ShortDescription
+
+</p>
+
+<div class="glowinproductdetails__price">
+
+    <span class="glowinproductdetails__current-price">
+
+        ₹@Model.Price.ToString("0")
+
+    </span>
+
+</div>

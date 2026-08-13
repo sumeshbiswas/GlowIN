@@ -1,4 +1,659 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@model GlowIN.Models.HomepageViewModel
 
+@{
+    ViewData["Title"] = "Home";
+}
+<!--Banner Section-->
+<section class="glowinhome-hero">
+
+    <div class="glowinhome-hero-container">
+
+        <div class="glowinhome-hero-content">
+
+            <span class="glowinhome-hero-badge">
+                @Model.Banner.Badge
+            </span>
+
+            <h1 class="glowinhome-hero-title">
+                @Model.Banner.Title
+                <span> @Model.Banner.HighlightText</span>
+            </h1>
+
+            <p class="glowinhome-hero-description">
+                @Model.Banner.Description
+            </p>
+
+            <div class="glowinhome-hero-actions">
+
+                <a href="@Model.Banner.ButtonUrl"
+                   class="glowinhome-hero-primary">
+                    @Model.Banner.ButtonText
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+
+                <a href="#about"
+                   class="glowinhome-hero-secondary">
+                    Our Story
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="glowinhome-hero-visual">
+
+            <div class="glowinhome-hero-circle"></div>
+
+            <div class="glowinhome-hero-image-wrapper">
+
+                <img src="@Model.Banner.ImageUrl"
+                     alt="GlowIN botanical skincare"
+                     class="glowinhome-hero-image" />
+                
+            </div>
+
+            <div class="glowinhome-hero-leaf glowinhome-hero-leaf--one">
+                <i class="bi bi-leaf-fill"></i>
+            </div>
+
+            <div class="glowinhome-hero-leaf glowinhome-hero-leaf--two">
+                <i class="bi bi-leaf-fill"></i>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--Benefits Section-->
+<section class="glowinbenefits">
+
+    <div class="glowinbenefits__background-leaf glowinbenefits__background-leaf--left">
+        <i class="bi bi-leaf-fill"></i>
+    </div>
+
+    <div class="glowinbenefits__background-leaf glowinbenefits__background-leaf--right">
+        <i class="bi bi-leaf-fill"></i>
+    </div>
+
+
+    <div class="glowinbenefits__container">
+
+        <!-- Section Heading -->
+
+        <div class="glowinbenefits__heading">
+
+            <span class="glowinbenefits__eyebrow">
+                THE GLOWIN PROMISE
+            </span>
+
+            <h2>
+                Rooted in Nature.
+                <span>Made With Care.</span>
+            </h2>
+
+            <p>
+                Thoughtfully crafted skincare inspired by the purity
+                and simplicity of nature.
+            </p>
+
+        </div>
+
+
+        <!-- Benefits Layout -->
+
+        <div class="glowinbenefits__layout">
+
+
+            <!-- Benefit 01 -->
+
+            <div class="glowinbenefits__item glowinbenefits__item--left-top">
+
+                <div class="glowinbenefits__icon">
+                    <i class="bi bi-flower1"></i>
+                </div>
+
+                <div class="glowinbenefits__content">
+
+                    <span class="glowinbenefits__number">
+                        01
+                    </span>
+
+                    <h3>
+                        100% Herbal
+                    </h3>
+
+                    <p>
+                        Plant-powered skincare inspired by
+                        botanical traditions.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Central Seal -->
+
+            <div class="glowinbenefits__seal">
+
+                <div class="glowinbenefits__seal-ring">
+
+                    <div class="glowinbenefits__seal-inner">
+
+                        <i class="bi bi-leaf-fill"></i>
+
+                        <span>
+                            GLOWIN
+                        </span>
+
+                        <small>
+                            BOTANICAL
+                            <br>
+                            SKINCARE
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Benefit 02 -->
+
+            <div class="glowinbenefits__item glowinbenefits__item--right-top">
+
+                <div class="glowinbenefits__icon">
+                    <i class="bi bi-droplet"></i>
+                </div>
+
+                <div class="glowinbenefits__content">
+
+                    <span class="glowinbenefits__number">
+                        02
+                    </span>
+
+                    <h3>
+                        Pure Ingredients
+                    </h3>
+
+                    <p>
+                        Carefully selected ingredients chosen
+                        with intention.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Benefit 03 -->
+
+            <div class="glowinbenefits__item glowinbenefits__item--left-bottom">
+
+                <div class="glowinbenefits__icon">
+                    <i class="bi bi-heart"></i>
+                </div>
+
+                <div class="glowinbenefits__content">
+
+                    <span class="glowinbenefits__number">
+                        03
+                    </span>
+
+                    <h3>
+                        Cruelty Free
+                    </h3>
+
+                    <p>
+                        Created with compassion and care
+                        for every part of the ritual.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Benefit 04 -->
+
+            <div class="glowinbenefits__item glowinbenefits__item--right-bottom">
+
+                <div class="glowinbenefits__icon">
+                    <i class="bi bi-stars"></i>
+                </div>
+
+                <div class="glowinbenefits__content">
+
+                    <span class="glowinbenefits__number">
+                        04
+                    </span>
+
+                    <h3>
+                        Skin Loving
+                    </h3>
+
+                    <p>
+                        Gentle everyday formulas designed
+                        for your natural skincare ritual.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--About Section-->
+
+<section class="glowinabout" id="about">
+
+    <!-- Decorative background -->
+
+    <div class="glowinabout__decor glowinabout__decor--one"></div>
+
+    <div class="glowinabout__decor glowinabout__decor--two"></div>
+
+
+    <div class="glowinabout__container">
+
+
+        <!-- =================================================
+             IMAGE
+             ================================================= -->
+
+        <div class="glowinabout__visual">
+
+            <div class="glowinabout__image-frame">
+
+                <img src="@Model.About.ImageUrl"
+                     alt="GlowIN botanical skincare"
+                     class="glowinabout__image" />
+
+            </div>
+
+
+            <!-- Floating label -->
+
+            <div class="glowinabout__image-label">
+
+                <span>
+                    EST.
+                </span>
+
+                <strong>
+                    GLOWIN
+                </strong>
+
+                <small>
+                    BOTANICAL BEAUTY
+                </small>
+
+            </div>
+
+
+            <!-- Botanical decoration -->
+
+            <div class="glowinabout__leaf glowinabout__leaf--one">
+                <i class="bi bi-leaf-fill"></i>
+            </div>
+
+            <div class="glowinabout__leaf glowinabout__leaf--two">
+                <i class="bi bi-leaf"></i>
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             CONTENT
+             ================================================= -->
+
+        <div class="glowinabout__content">
+
+            <div class="glowinabout__eyebrow">
+
+                <span></span>
+
+                OUR STORY
+
+            </div>
+
+
+            <h2 class="glowinabout__title">
+
+                Beauty begins
+
+                <em>
+                    with nature.
+                </em>
+
+            </h2>
+
+
+            <div class="glowinabout__line"></div>
+
+
+            <p class="glowinabout__description">
+
+                GlowIN was created around a simple belief —
+                skincare should work in harmony with nature.
+
+            </p>
+
+
+            <p class="glowinabout__description glowinabout__description--secondary">
+
+                We bring together carefully selected botanical
+                ingredients and thoughtful formulations to create
+                a gentle, conscious skincare ritual that celebrates
+                your skin's natural beauty.
+
+            </p>
+
+
+            <!-- Philosophy -->
+
+            <div class="glowinabout__philosophy">
+
+                <div class="glowinabout__philosophy-item">
+
+                    <span>
+                        01
+                    </span>
+
+                    <strong>
+                        PURE
+                    </strong>
+
+                    <small>
+                        Ingredients
+                    </small>
+
+                </div>
+
+
+                <div class="glowinabout__philosophy-item">
+
+                    <span>
+                        02
+                    </span>
+
+                    <strong>
+                        BOTANICAL
+                    </strong>
+
+                    <small>
+                        Inspired
+                    </small>
+
+                </div>
+
+
+                <div class="glowinabout__philosophy-item">
+
+                    <span>
+                        03
+                    </span>
+
+                    <strong>
+                        CONSCIOUS
+                    </strong>
+
+                    <small>
+                        Beauty
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- Button -->
+
+            <a href="#about-story"
+               class="glowinabout__button">
+
+                <span>
+                    Discover Our Story
+                </span>
+
+                <i class="bi bi-arrow-up-right"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--Product Section-->
+<section class="glowinproducts"
+         id="products">
+
+
+    <div class="glowinproducts__container">
+
+
+        <!-- =================================================
+             HEADER
+             ================================================= -->
+
+        <div class="glowinproducts__header">
+
+
+            <div class="glowinproducts__heading">
+
+
+                <span class="glowinproducts__eyebrow">
+
+                    THE GLOWIN COLLECTION
+
+                </span>
+
+
+                <h2>
+
+                    Botanical care,
+                    <em>beautifully simple.</em>
+
+                </h2>
+
+
+                <p>
+
+                    Thoughtfully crafted skincare
+                    made with pure botanical ingredients
+                    for your everyday ritual.
+
+                </p>
+
+            </div>
+
+
+            <a asp-controller="Products"
+               asp-action="Index"
+               class="glowinproducts__view-all">
+
+                <span>
+                    Explore All Products
+                </span>
+
+                <i class="bi bi-arrow-up-right"></i>
+
+            </a>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             FILTER
+             ================================================= -->
+
+        <div class="glowinproducts__filters">
+
+
+            <button type="button"
+                    class="glowinproducts__filter active"
+                    data-filter="all">
+
+                All
+
+            </button>
+
+
+            <button type="button"
+                    class="glowinproducts__filter"
+                    data-filter="Face Care">
+
+                Face Care
+
+            </button>
+
+
+            <button type="button"
+                    class="glowinproducts__filter"
+                    data-filter="Cleansing">
+
+                Cleansing
+
+            </button>
+
+
+            <button type="button"
+                    class="glowinproducts__filter"
+                    data-filter="Hydration">
+
+                Hydration
+
+            </button>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             PRODUCTS
+             ================================================= -->
+
+        <div class="glowinproducts__grid"
+             id="glowinProductsGrid">
+
+            @foreach (var product in Model.FeaturedProducts)
+            {
+                <div class="glowinproducts__item"
+                     data-category="@product.Category">
+
+                    <partial name="_ProductCard"
+                             model="product" />
+
+                </div>
+            }
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+
+<script>
+
+    document.addEventListener(
+        "DOMContentLoaded",
+        function () {
+
+
+            const filters =
+                document.querySelectorAll(
+                    ".glowinproducts__filter"
+                );
+
+
+            const products =
+                document.querySelectorAll(
+                    ".glowinproducts__item"
+                );
+
+
+            filters.forEach(
+                function (filter) {
+
+                    filter.addEventListener(
+                        "click",
+                        function () {
+
+
+                            filters.forEach(
+                                function (item) {
+
+                                    item.classList.remove(
+                                        "active"
+                                    );
+
+                                }
+                            );
+
+
+                            this.classList.add(
+                                "active"
+                            );
+
+
+                            const selectedCategory =
+                                this.dataset.filter;
+
+
+                            products.forEach(
+                                function (product) {
+
+                                    const category =
+                                        product.dataset.category;
+
+
+                                    if (
+                                        selectedCategory ===
+                                        "all" ||
+                                        category ===
+                                        selectedCategory
+                                    ) {
+
+                                        product.style.display =
+                                            "";
+
+                                    }
+                                    else {
+
+                                        product.style.display =
+                                            "none";
+
+                                    }
+
+                                }
+                            );
+
+                        }
+                    );
+
+                }
+            );
+
+        }
+    );
+
+</script>

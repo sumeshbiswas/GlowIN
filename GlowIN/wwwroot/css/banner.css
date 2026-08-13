@@ -1,0 +1,381 @@
+/* =========================================================
+   GLOWIN HOMEPAGE
+   HERO / BANNER
+   ========================================================= */
+
+.glowinhome-hero {
+    position: relative;
+    width: 100%;
+    min-height: calc(100vh - 82px);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: radial-gradient( circle at 78% 48%, rgba(168, 181, 160, 0.22), transparent 30% ), var(--glowin-ivory);
+}
+
+
+.glowinhome-hero-container {
+    width: min(100% - 40px, 1280px);
+    min-height: 585px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.glowinhome-hero-content {
+    position: relative;
+    z-index: 5;
+    max-width: 620px;
+}
+
+
+.glowinhome-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 22px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--glowin-gold);
+}
+
+
+    .glowinhome-hero-badge::before {
+        content: "";
+        width: 28px;
+        height: 1px;
+        background: var(--glowin-gold);
+    }
+
+
+.glowinhome-hero-title {
+    margin: 0;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(48px, 6vw, 78px);
+    font-weight: 500;
+    line-height: 1.08;
+    letter-spacing: -1px;
+    color: var(--glowin-forest);
+}
+
+
+    .glowinhome-hero-title span {
+        display: block;
+        color: var(--glowin-gold);
+    }
+
+
+.glowinhome-hero-description {
+    max-width: 520px;
+    margin: 25px 0 32px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--glowin-charcoal);
+}
+
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
+.glowinhome-hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+
+.glowinhome-hero-primary {
+    min-height: 50px;
+    padding: 0 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: var(--glowin-white);
+    background: var(--glowin-forest);
+    font-family: "DM Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+    .glowinhome-hero-primary:hover {
+        color: var(--glowin-white);
+        background: var(--glowin-botanical);
+        transform: translateY(-2px);
+        box-shadow: 0 12px 25px rgba(36, 56, 47, 0.15);
+    }
+
+
+    .glowinhome-hero-primary i {
+        transition: transform 0.3s ease;
+    }
+
+
+    .glowinhome-hero-primary:hover i {
+        transform: translateX(4px);
+    }
+
+
+.glowinhome-hero-secondary {
+    position: relative;
+    color: var(--glowin-forest);
+    font-family: "DM Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+
+    .glowinhome-hero-secondary::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        width: 100%;
+        height: 1px;
+        background: var(--glowin-gold);
+    }
+
+
+/* =========================================================
+   VISUAL
+   ========================================================= */
+
+.glowinhome-hero-visual {
+    position: relative;
+    width: min(100%, 570px);
+    aspect-ratio: 1 / 1;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.glowinhome-hero-circle {
+    position: absolute;
+    width: 78%;
+    height: 78%;
+    border: 1px solid rgba(180, 154, 98, 0.35);
+    border-radius: 50%;
+}
+
+
+    .glowinhome-hero-circle::before {
+        content: "";
+        position: absolute;
+        inset: 25px;
+        border: 1px dashed rgba(82, 107, 89, 0.25);
+        border-radius: 50%;
+    }
+
+
+.glowinhome-hero-image-wrapper {
+    position: relative;
+    z-index: 2;
+    width: 70%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.glowinhome-hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow( 0 25px 35px rgba(36, 56, 47, 0.16) );
+    animation: glowinhomeHeroFloat 5s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   BOTANICAL DECORATION
+   ========================================================= */
+
+.glowinhome-hero-leaf {
+    position: absolute;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--glowin-botanical);
+    font-size: 26px;
+    opacity: 0.75;
+}
+
+
+.glowinhome-hero-leaf--one {
+    top: 12%;
+    right: 9%;
+    transform: rotate(-25deg);
+    animation: glowinhomeHeroLeafOne 4s ease-in-out infinite;
+}
+
+
+.glowinhome-hero-leaf--two {
+    bottom: 15%;
+    left: 9%;
+    transform: rotate(30deg);
+    animation: glowinhomeHeroLeafTwo 5s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes glowinhomeHeroFloat {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+@keyframes glowinhomeHeroLeafOne {
+
+    0%, 100% {
+        transform: translateY(0) rotate(-25deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(-15deg);
+    }
+}
+
+
+@keyframes glowinhomeHeroLeafTwo {
+
+    0%, 100% {
+        transform: translateY(0) rotate(30deg);
+    }
+
+    50% {
+        transform: translateY(10px) rotate(40deg);
+    }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 991.98px) {
+
+    .glowinhome-hero-container {
+        grid-template-columns: 1fr 0.9fr;
+        gap: 20px;
+    }
+
+    .glowinhome-hero-title {
+        font-size: clamp(42px, 6vw, 62px);
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767.98px) {
+
+    .glowinhome-hero {
+        min-height: auto;
+        padding: 55px 0 70px;
+    }
+
+
+    .glowinhome-hero-container {
+        width: calc(100% - 30px);
+        min-height: auto;
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+
+    .glowinhome-hero-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+
+    .glowinhome-hero-badge {
+        justify-content: center;
+    }
+
+
+    .glowinhome-hero-title {
+        font-size: clamp(40px, 11vw, 58px);
+    }
+
+
+    .glowinhome-hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .glowinhome-hero-actions {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+
+    .glowinhome-hero-visual {
+        width: min(100%, 430px);
+        margin: 0 auto;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .glowinhome-hero {
+        padding-top: 40px;
+    }
+
+
+    .glowinhome-hero-title {
+        font-size: 40px;
+    }
+
+
+    .glowinhome-hero-description {
+        font-size: 14px;
+    }
+
+
+    .glowinhome-hero-primary {
+        width: 100%;
+    }
+
+
+    .glowinhome-hero-actions {
+        flex-direction: column;
+        gap: 18px;
+    }
+}

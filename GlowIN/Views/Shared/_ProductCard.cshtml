@@ -1,0 +1,183 @@
+﻿@model GlowIN.Models.Product
+
+<article class="glowinproducts__card">
+
+
+    <!-- =====================================================
+         IMAGE
+         ===================================================== -->
+
+    <div class="glowinproducts__image-wrapper">
+
+
+        @if (!string.IsNullOrWhiteSpace(Model.Badge))
+        {
+            <span class="glowinproducts__badge">
+                @Model.Badge
+            </span>
+        }
+
+
+        <!-- Wishlist -->
+
+        <button type="button"
+                class="glowinproducts__wishlist"
+                aria-label="Add to wishlist">
+
+            <i class="bi bi-heart"></i>
+
+        </button>
+
+
+        <!-- Product Image -->
+
+        <a asp-controller="Products"
+           asp-action="Details"
+           asp-route-id="@Model.Id"
+           class="glowinproducts__image-link">
+
+            <img src="@Model.ImageUrl"
+                 alt="@Model.ProductName"
+                 loading="lazy" />
+
+        </a>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         CONTENT
+         ===================================================== -->
+
+    <div class="glowinproducts__content">
+
+
+        <!-- Category -->
+
+        <span class="glowinproducts__category">
+
+            @Model.Category
+
+        </span>
+
+
+        <!-- Product Name -->
+
+        <h3 class="glowinproducts__name">
+
+            <a asp-controller="Products"
+               asp-action="Details"
+               asp-route-id="@Model.Id">
+
+                @Model.ProductName
+
+            </a>
+
+        </h3>
+
+
+        <!-- Description -->
+
+        <p class="glowinproducts__description">
+
+            @Model.ShortDescription
+
+        </p>
+
+
+        <!-- Rating -->
+
+        <div class="glowinproducts__rating">
+
+            <span class="glowinproducts__stars">
+
+                ★★★★★
+
+            </span>
+
+            <span>
+
+                @Model.Rating.ToString("0.0")
+
+            </span>
+
+            <span>
+
+                (@Model.ReviewCount)
+
+            </span>
+
+        </div>
+
+
+        <!-- Price -->
+
+        <div class="glowinproducts__price">
+
+
+            <span class="glowinproducts__current-price">
+
+                ₹@Model.Price.ToString("0")
+
+            </span>
+
+
+            @if (Model.OldPrice.HasValue)
+            {
+                <span class="glowinproducts__old-price">
+
+                    ₹@Model.OldPrice.Value.ToString("0")
+
+                </span>
+            }
+
+        </div>
+
+
+
+        <!-- =================================================
+             ACTIONS
+             ================================================= -->
+
+        <div class="glowinproducts__actions">
+
+
+            <!-- View Product -->
+
+            <a asp-controller="Products"
+               asp-action="Details"
+               asp-route-id="@Model.Id"
+               class="glowinproducts__view-product">
+
+                <span>
+                    View Product
+                </span>
+
+                <i class="bi bi-arrow-up-right"></i>
+
+            </a>
+
+
+            <!-- Add To Bag -->
+
+            <button type="button"
+                    class="glowinproducts__add-bag"
+                    data-product-id="@Model.Id">
+
+                <i class="bi bi-bag-plus"></i>
+
+                <span>
+                    Add to Bag
+                </span>
+
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+</article>

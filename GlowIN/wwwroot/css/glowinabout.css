@@ -1,0 +1,603 @@
+/* =========================================================
+   GLOWIN ABOUT
+   PREMIUM BOTANICAL STORY SECTION
+   ========================================================= */
+
+.glowinabout {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 140px 0;
+    background: radial-gradient( circle at 85% 20%, rgba(168, 181, 160, 0.14), transparent 30% ), var(--glowin-ivory);
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.glowinabout__container {
+    position: relative;
+    z-index: 2;
+    width: min(100% - 50px, 1280px);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(400px, 0.9fr) minmax(400px, 1fr);
+    gap: 110px;
+    align-items: center;
+}
+
+
+/* =========================================================
+   VISUAL
+   ========================================================= */
+
+.glowinabout__visual {
+    position: relative;
+    min-height: 620px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =========================================================
+   IMAGE FRAME
+   ========================================================= */
+
+.glowinabout__image-frame {
+    position: relative;
+    width: min(100%, 470px);
+    height: 600px;
+    overflow: hidden;
+    background: var(--glowin-cream);
+}
+
+
+    /* Outer gold frame */
+
+    .glowinabout__image-frame::before {
+        content: "";
+        position: absolute;
+        z-index: 2;
+        inset: 14px;
+        border: 1px solid rgba(180, 154, 98, 0.55);
+        pointer-events: none;
+    }
+
+
+/* Image */
+
+.glowinabout__image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transform: scale(1.02);
+    transition: transform 1s cubic-bezier( 0.2, 0.65, 0.3, 1 );
+}
+
+
+/* Image hover */
+
+.glowinabout__image-frame:hover
+.glowinabout__image {
+    transform: scale(1.07);
+}
+
+
+/* =========================================================
+   IMAGE LABEL
+   ========================================================= */
+
+.glowinabout__image-label {
+    position: absolute;
+    z-index: 5;
+    right: -35px;
+    bottom: 55px;
+    width: 145px;
+    height: 145px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50%;
+    background: var(--glowin-forest);
+    border: 1px solid rgba(180, 154, 98, 0.55);
+    box-shadow: 0 20px 45px rgba(36, 56, 47, 0.18);
+    transform: rotate(7deg);
+}
+
+
+    .glowinabout__image-label::before {
+        content: "";
+        position: absolute;
+        inset: 9px;
+        border: 1px solid rgba(180, 154, 98, 0.30);
+        border-radius: 50%;
+    }
+
+
+    .glowinabout__image-label span {
+        position: relative;
+        z-index: 2;
+        color: var(--glowin-gold);
+        font-family: "DM Sans", sans-serif;
+        font-size: 7px;
+        letter-spacing: 2px;
+    }
+
+
+    .glowinabout__image-label strong {
+        position: relative;
+        z-index: 2;
+        margin-top: 4px;
+        color: var(--glowin-ivory);
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 21px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+
+
+    .glowinabout__image-label small {
+        position: relative;
+        z-index: 2;
+        margin-top: 4px;
+        color: rgba( 248, 245, 238, 0.55 );
+        font-family: "DM Sans", sans-serif;
+        font-size: 6px;
+        letter-spacing: 1.5px;
+    }
+
+
+/* =========================================================
+   BOTANICAL LEAVES
+   ========================================================= */
+
+.glowinabout__leaf {
+    position: absolute;
+    color: var(--glowin-botanical);
+    pointer-events: none;
+}
+
+
+    .glowinabout__leaf i {
+        font-size: 35px;
+    }
+
+
+.glowinabout__leaf--one {
+    top: 55px;
+    left: 20px;
+    opacity: 0.30;
+    transform: rotate(-35deg);
+    animation: glowinaboutLeafOne 6s ease-in-out infinite;
+}
+
+
+.glowinabout__leaf--two {
+    right: 5px;
+    top: 160px;
+    opacity: 0.20;
+    transform: rotate(125deg);
+    animation: glowinaboutLeafTwo 7s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.glowinabout__content {
+    max-width: 570px;
+}
+
+
+.glowinabout__eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    color: var(--glowin-gold);
+    font-family: "DM Sans", sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+
+    .glowinabout__eyebrow span {
+        width: 40px;
+        height: 1px;
+        background: var(--glowin-gold);
+    }
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.glowinabout__title {
+    margin: 27px 0 0;
+    color: var(--glowin-forest);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp( 48px, 5vw, 72px );
+    font-weight: 400;
+    line-height: 1.08;
+    letter-spacing: -1px;
+}
+
+
+    .glowinabout__title em {
+        display: block;
+        color: var(--glowin-botanical);
+        font-weight: 400;
+        font-style: italic;
+    }
+
+
+/* =========================================================
+   GOLD LINE
+   ========================================================= */
+
+.glowinabout__line {
+    width: 65px;
+    height: 1px;
+    margin: 30px 0;
+    background: var(--glowin-gold);
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.glowinabout__description {
+    max-width: 520px;
+    margin: 0;
+    color: var(--glowin-charcoal);
+    font-family: "DM Sans", sans-serif;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+
+.glowinabout__description--secondary {
+    margin-top: 16px;
+    color: rgba( 37, 39, 36, 0.65 );
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   PHILOSOPHY
+   ========================================================= */
+
+.glowinabout__philosophy {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 500px;
+    margin-top: 42px;
+    border-top: 1px solid rgba(36, 56, 47, 0.15);
+    border-bottom: 1px solid rgba(36, 56, 47, 0.15);
+}
+
+
+.glowinabout__philosophy-item {
+    position: relative;
+    padding: 20px 15px;
+}
+
+
+    .glowinabout__philosophy-item + .glowinabout__philosophy-item {
+        border-left: 1px solid rgba(36, 56, 47, 0.15);
+    }
+
+
+    .glowinabout__philosophy-item span {
+        display: block;
+        margin-bottom: 8px;
+        color: var(--glowin-gold);
+        font-family: "DM Sans", sans-serif;
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+
+    .glowinabout__philosophy-item strong {
+        display: block;
+        color: var(--glowin-forest);
+        font-family: "DM Sans", sans-serif;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+    }
+
+
+    .glowinabout__philosophy-item small {
+        display: block;
+        margin-top: 3px;
+        color: rgba( 37, 39, 36, 0.55 );
+        font-family: "DM Sans", sans-serif;
+        font-size: 10px;
+    }
+
+
+/* =========================================================
+   BUTTON
+   ========================================================= */
+
+.glowinabout__button {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 40px;
+    padding-bottom: 8px;
+    color: var(--glowin-forest);
+    text-decoration: none;
+    font-family: "DM Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    border-bottom: 1px solid var(--glowin-gold);
+    transition: gap 0.35s ease, color 0.35s ease;
+}
+
+
+    .glowinabout__button i {
+        color: var(--glowin-gold);
+        font-size: 15px;
+    }
+
+
+    .glowinabout__button:hover {
+        gap: 25px;
+        color: var(--glowin-botanical);
+    }
+
+
+/* =========================================================
+   BACKGROUND DECOR
+   ========================================================= */
+
+.glowinabout__decor {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(82, 107, 89, 0.10);
+    pointer-events: none;
+}
+
+
+.glowinabout__decor--one {
+    width: 500px;
+    height: 500px;
+    left: -320px;
+    top: 5%;
+}
+
+
+.glowinabout__decor--two {
+    width: 350px;
+    height: 350px;
+    right: -220px;
+    bottom: -100px;
+    border-color: rgba(180, 154, 98, 0.10);
+}
+
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes glowinaboutLeafOne {
+
+    0%, 100% {
+        transform: translateY(0) rotate(-35deg);
+    }
+
+    50% {
+        transform: translateY(-12px) rotate(-28deg);
+    }
+}
+
+
+@keyframes glowinaboutLeafTwo {
+
+    0%, 100% {
+        transform: translateY(0) rotate(125deg);
+    }
+
+    50% {
+        transform: translateY(15px) rotate(135deg);
+    }
+}
+
+@media (max-width: 991.98px) {
+
+    .glowinabout {
+        padding: 110px 0;
+    }
+
+
+    .glowinabout__container {
+        width: min( 100% - 40px, 900px );
+        grid-template-columns: 0.9fr 1fr;
+        gap: 60px;
+    }
+
+
+    .glowinabout__visual {
+        min-height: 520px;
+    }
+
+
+    .glowinabout__image-frame {
+        height: 510px;
+    }
+
+
+    .glowinabout__image-label {
+        right: -20px;
+        bottom: 35px;
+        width: 125px;
+        height: 125px;
+    }
+
+
+    .glowinabout__title {
+        font-size: clamp( 43px, 6vw, 58px );
+    }
+}
+
+@media (max-width: 767.98px) {
+
+    .glowinabout {
+        padding: 90px 0;
+    }
+
+
+    .glowinabout__container {
+        width: calc(100% - 30px);
+        display: flex;
+        flex-direction: column;
+        gap: 65px;
+    }
+
+
+    /* IMAGE */
+
+    .glowinabout__visual {
+        width: 100%;
+        min-height: auto;
+    }
+
+
+    .glowinabout__image-frame {
+        width: calc( 100% - 35px );
+        height: 460px;
+        margin-left: 0;
+    }
+
+
+    .glowinabout__image-label {
+        right: 0;
+        bottom: 30px;
+        width: 120px;
+        height: 120px;
+    }
+
+
+    /* CONTENT */
+
+    .glowinabout__content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+
+    .glowinabout__eyebrow {
+        justify-content: center;
+    }
+
+
+    .glowinabout__title {
+        margin-top: 23px;
+        font-size: clamp( 42px, 12vw, 58px );
+    }
+
+
+    .glowinabout__line {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .glowinabout__description {
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+
+    .glowinabout__description--secondary {
+        font-size: 12px;
+    }
+
+
+    .glowinabout__philosophy {
+        width: 100%;
+    }
+
+
+    .glowinabout__philosophy-item {
+        padding: 17px 8px;
+    }
+
+
+        .glowinabout__philosophy-item strong {
+            font-size: 9px;
+            letter-spacing: 1px;
+        }
+
+
+        .glowinabout__philosophy-item small {
+            font-size: 9px;
+        }
+
+
+    .glowinabout__button {
+        margin-top: 32px;
+    }
+}
+
+@media (max-width: 420px) {
+
+    .glowinabout {
+        padding: 75px 0;
+    }
+
+
+    .glowinabout__container {
+        width: calc(100% - 24px);
+        gap: 50px;
+    }
+
+
+    .glowinabout__image-frame {
+        width: calc( 100% - 25px );
+        height: 390px;
+    }
+
+
+    .glowinabout__image-label {
+        width: 105px;
+        height: 105px;
+        right: 0;
+        bottom: 20px;
+    }
+
+
+        .glowinabout__image-label strong {
+            font-size: 18px;
+        }
+
+
+    .glowinabout__title {
+        font-size: 39px;
+    }
+
+
+    .glowinabout__philosophy-item {
+        padding: 15px 5px;
+    }
+
+
+        .glowinabout__philosophy-item strong {
+            font-size: 8px;
+        }
+
+
+        .glowinabout__philosophy-item small {
+            font-size: 8px;
+        }
+}

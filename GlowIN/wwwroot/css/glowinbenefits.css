@@ -1,0 +1,713 @@
+/* =========================================================
+   GLOWIN BENEFITS
+   BOTANICAL PROMISE SECTION
+   ========================================================= */
+
+.glowinbenefits {
+    position: relative;
+    width: 100%;
+    padding: 120px 0;
+    overflow: hidden;
+    background: var(--glowin-cream);
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.glowinbenefits__container {
+    position: relative;
+    z-index: 2;
+    width: min(100% - 40px, 1280px);
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   BACKGROUND BOTANICAL DECORATION
+   ========================================================= */
+
+.glowinbenefits__background-leaf {
+    position: absolute;
+    z-index: 0;
+    color: var(--glowin-sage);
+    opacity: 0.16;
+    pointer-events: none;
+}
+
+
+    .glowinbenefits__background-leaf i {
+        display: block;
+        font-size: 180px;
+    }
+
+
+.glowinbenefits__background-leaf--left {
+    left: -70px;
+    top: 18%;
+    transform: rotate(-35deg);
+    animation: glowinbenefitsLeafFloatLeft 8s ease-in-out infinite;
+}
+
+
+.glowinbenefits__background-leaf--right {
+    right: -70px;
+    bottom: 10%;
+    transform: rotate(145deg);
+    animation: glowinbenefitsLeafFloatRight 9s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.glowinbenefits__heading {
+    max-width: 650px;
+    margin: 0 auto 80px;
+    text-align: center;
+}
+
+
+.glowinbenefits__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+    color: var(--glowin-gold);
+    font-family: "DM Sans", sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+}
+
+
+    .glowinbenefits__eyebrow::before,
+    .glowinbenefits__eyebrow::after {
+        content: "";
+        width: 25px;
+        height: 1px;
+        background: var(--glowin-gold);
+    }
+
+
+.glowinbenefits__heading h2 {
+    margin: 0;
+    color: var(--glowin-forest);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(38px, 5vw, 58px);
+    font-weight: 500;
+    line-height: 1.15;
+}
+
+
+    .glowinbenefits__heading h2 span {
+        display: block;
+        color: var(--glowin-botanical);
+    }
+
+
+.glowinbenefits__heading p {
+    max-width: 530px;
+    margin: 22px auto 0;
+    color: var(--glowin-charcoal);
+    font-family: "DM Sans", sans-serif;
+    font-size: 15px;
+    line-height: 1.8;
+    opacity: 0.78;
+}
+
+
+/* =========================================================
+   BENEFITS LAYOUT
+   ========================================================= */
+
+.glowinbenefits__layout {
+    position: relative;
+    width: min(100%, 1080px);
+    min-height: 520px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 320px 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 75px;
+    row-gap: 65px;
+    align-items: center;
+}
+
+
+/* =========================================================
+   BENEFIT ITEMS
+   ========================================================= */
+
+.glowinbenefits__item {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    max-width: 330px;
+    transition: transform 0.4s ease;
+}
+
+
+    .glowinbenefits__item:hover {
+        transform: translateY(-6px);
+    }
+
+
+/* =========================================================
+   ITEM POSITIONING
+   ========================================================= */
+
+.glowinbenefits__item--left-top {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: end;
+}
+
+
+.glowinbenefits__item--right-top {
+    grid-column: 3;
+    grid-row: 1;
+    justify-self: start;
+}
+
+
+.glowinbenefits__item--left-bottom {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: end;
+}
+
+
+.glowinbenefits__item--right-bottom {
+    grid-column: 3;
+    grid-row: 2;
+    justify-self: start;
+}
+
+
+/* =========================================================
+   ICON
+   ========================================================= */
+
+.glowinbenefits__icon {
+    flex: 0 0 54px;
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(180, 154, 98, 0.45);
+    border-radius: 50%;
+    color: var(--glowin-gold);
+    background: rgba(248, 245, 238, 0.75);
+    transition: background 0.35s ease, color 0.35s ease, transform 0.35s ease;
+}
+
+
+.glowinbenefits__item:hover .glowinbenefits__icon {
+    color: var(--glowin-white);
+    background: var(--glowin-forest);
+    transform: rotate(-8deg);
+}
+
+
+.glowinbenefits__icon i {
+    font-size: 21px;
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.glowinbenefits__content {
+    position: relative;
+}
+
+
+.glowinbenefits__number {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--glowin-gold);
+    font-family: "DM Sans", sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+
+.glowinbenefits__content h3 {
+    margin: 0 0 8px;
+    color: var(--glowin-forest);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 23px;
+    font-weight: 500;
+}
+
+
+.glowinbenefits__content p {
+    margin: 0;
+    color: var(--glowin-charcoal);
+    font-family: "DM Sans", sans-serif;
+    font-size: 13px;
+    line-height: 1.7;
+    opacity: 0.75;
+}
+
+
+/* =========================================================
+   CENTRAL BOTANICAL SEAL
+   ========================================================= */
+
+.glowinbenefits__seal {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    position: relative;
+    width: 320px;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+}
+
+
+    .glowinbenefits__seal::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 1px solid rgba(180, 154, 98, 0.35);
+        animation: glowinbenefitsSealRotate 24s linear infinite;
+    }
+
+
+    .glowinbenefits__seal::after {
+        content: "";
+        position: absolute;
+        width: 82%;
+        height: 82%;
+        border-radius: 50%;
+        border: 1px dashed rgba(82, 107, 89, 0.30);
+    }
+
+
+/* =========================================================
+   SEAL RING
+   ========================================================= */
+
+.glowinbenefits__seal-ring {
+    position: relative;
+    z-index: 2;
+    width: 215px;
+    height: 215px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: radial-gradient( circle, rgba(248, 245, 238, 1) 0%, rgba(238, 232, 218, 0.95) 100% );
+    box-shadow: 0 20px 55px rgba(36, 56, 47, 0.10);
+}
+
+
+    .glowinbenefits__seal-ring::before {
+        content: "";
+        position: absolute;
+        inset: 10px;
+        border: 1px solid rgba(180, 154, 98, 0.45);
+        border-radius: 50%;
+    }
+
+
+/* =========================================================
+   SEAL INNER
+   ========================================================= */
+
+.glowinbenefits__seal-inner {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+    .glowinbenefits__seal-inner i {
+        margin-bottom: 8px;
+        color: var(--glowin-botanical);
+        font-size: 26px;
+        animation: glowinbenefitsLeafPulse 3s ease-in-out infinite;
+    }
+
+
+    .glowinbenefits__seal-inner span {
+        color: var(--glowin-forest);
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 25px;
+        font-weight: 600;
+        letter-spacing: 2px;
+    }
+
+
+    .glowinbenefits__seal-inner small {
+        margin-top: 5px;
+        color: var(--glowin-gold);
+        font-family: "DM Sans", sans-serif;
+        font-size: 8px;
+        font-weight: 600;
+        line-height: 1.5;
+        letter-spacing: 2px;
+    }
+
+
+/* =========================================================
+   CONNECTING LINES
+   ========================================================= */
+
+.glowinbenefits__item::after {
+    content: "";
+    position: absolute;
+    top: 27px;
+    width: 70px;
+    height: 1px;
+    background: linear-gradient( 90deg, rgba(180, 154, 98, 0), rgba(180, 154, 98, 0.45) );
+}
+
+
+.glowinbenefits__item--left-top::after,
+.glowinbenefits__item--left-bottom::after {
+    right: -90px;
+}
+
+
+.glowinbenefits__item--right-top::after,
+.glowinbenefits__item--right-bottom::after {
+    left: -90px;
+    transform: rotate(180deg);
+}
+
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes glowinbenefitsSealRotate {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes glowinbenefitsLeafPulse {
+
+    0%, 100% {
+        transform: scale(1) rotate(0deg);
+    }
+
+    50% {
+        transform: scale(1.12) rotate(-5deg);
+    }
+}
+
+
+@keyframes glowinbenefitsLeafFloatLeft {
+
+    0%, 100% {
+        transform: rotate(-35deg) translateY(0);
+    }
+
+    50% {
+        transform: rotate(-30deg) translateY(-18px);
+    }
+}
+
+
+@keyframes glowinbenefitsLeafFloatRight {
+
+    0%, 100% {
+        transform: rotate(145deg) translateY(0);
+    }
+
+    50% {
+        transform: rotate(140deg) translateY(18px);
+    }
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 991.98px) {
+
+    .glowinbenefits {
+        padding: 95px 0;
+    }
+
+
+    .glowinbenefits__heading {
+        margin-bottom: 60px;
+    }
+
+
+    .glowinbenefits__layout {
+        grid-template-columns: 1fr 250px 1fr;
+        column-gap: 25px;
+        row-gap: 55px;
+    }
+
+
+    .glowinbenefits__seal {
+        width: 250px;
+        height: 250px;
+    }
+
+
+    .glowinbenefits__seal-ring {
+        width: 175px;
+        height: 175px;
+    }
+
+
+    .glowinbenefits__seal-inner span {
+        font-size: 21px;
+    }
+
+
+    .glowinbenefits__item {
+        max-width: 290px;
+    }
+
+
+        .glowinbenefits__item::after {
+            width: 35px;
+        }
+
+
+    .glowinbenefits__item--left-top::after,
+    .glowinbenefits__item--left-bottom::after {
+        right: -50px;
+    }
+
+
+    .glowinbenefits__item--right-top::after,
+    .glowinbenefits__item--right-bottom::after {
+        left: -50px;
+    }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767.98px) {
+
+    .glowinbenefits {
+        padding: 80px 0;
+    }
+
+
+    .glowinbenefits__container {
+        width: calc(100% - 30px);
+    }
+
+
+    .glowinbenefits__heading {
+        margin-bottom: 55px;
+    }
+
+
+        .glowinbenefits__heading h2 {
+            font-size: clamp(36px, 10vw, 48px);
+        }
+
+
+        .glowinbenefits__heading p {
+            font-size: 14px;
+        }
+
+
+    .glowinbenefits__layout {
+        width: 100%;
+        min-height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+
+    /* Central seal */
+
+    .glowinbenefits__seal {
+        order: 1;
+        width: 230px;
+        height: 230px;
+        margin: 0 auto 60px;
+    }
+
+
+    .glowinbenefits__seal-ring {
+        width: 160px;
+        height: 160px;
+    }
+
+
+    .glowinbenefits__seal-inner span {
+        font-size: 20px;
+    }
+
+
+    .glowinbenefits__seal-inner small {
+        font-size: 7px;
+    }
+
+
+    /* Benefits */
+
+    .glowinbenefits__item {
+        width: min(100%, 450px);
+        max-width: none;
+        justify-self: auto !important;
+        margin-bottom: 32px;
+        padding: 0 0 32px;
+        border-bottom: 1px solid rgba(36, 56, 47, 0.10);
+    }
+
+
+        .glowinbenefits__item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: 0;
+        }
+
+
+        /* Remove desktop connecting lines */
+
+        .glowinbenefits__item::after {
+            display: none;
+        }
+
+
+    .glowinbenefits__icon {
+        flex-basis: 50px;
+        width: 50px;
+        height: 50px;
+    }
+
+
+    .glowinbenefits__content h3 {
+        font-size: 21px;
+    }
+
+
+    .glowinbenefits__content p {
+        font-size: 13px;
+    }
+
+
+    /* Background decoration */
+
+    .glowinbenefits__background-leaf i {
+        font-size: 120px;
+    }
+
+
+    .glowinbenefits__background-leaf--left {
+        left: -60px;
+    }
+
+
+    .glowinbenefits__background-leaf--right {
+        right: -60px;
+    }
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .glowinbenefits {
+        padding: 65px 0;
+    }
+
+
+    .glowinbenefits__container {
+        width: calc(100% - 24px);
+    }
+
+
+    .glowinbenefits__heading h2 {
+        font-size: 34px;
+    }
+
+
+    .glowinbenefits__heading p {
+        font-size: 13px;
+    }
+
+
+    .glowinbenefits__seal {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 50px;
+    }
+
+
+    .glowinbenefits__seal-ring {
+        width: 140px;
+        height: 140px;
+    }
+
+
+    .glowinbenefits__seal-inner span {
+        font-size: 18px;
+    }
+
+
+    .glowinbenefits__seal-inner i {
+        font-size: 21px;
+    }
+
+
+    .glowinbenefits__item {
+        gap: 14px;
+    }
+
+
+    .glowinbenefits__icon {
+        flex-basis: 46px;
+        width: 46px;
+        height: 46px;
+    }
+
+
+    .glowinbenefits__content h3 {
+        font-size: 19px;
+    }
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .glowinbenefits *,
+    .glowinbenefits *::before,
+    .glowinbenefits *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}

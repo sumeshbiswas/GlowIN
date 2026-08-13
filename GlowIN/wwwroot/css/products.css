@@ -1,0 +1,565 @@
+/* =========================================================
+   GLOWIN PRODUCTS
+   ========================================================= */
+
+.glowinproducts {
+    width: 100%;
+    padding: 110px 0;
+    background: var(--glowin-ivory, #F8F5EE);
+}
+
+
+.glowinproducts__container {
+    width: min( calc(100% - 60px), 1280px );
+    margin: auto;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.glowinproducts__header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 45px;
+}
+
+
+.glowinproducts__eyebrow {
+    display: block;
+    margin-bottom: 13px;
+    color: var(--glowin-gold, #B49A62);
+    font-family: "DM Sans", sans-serif;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+}
+
+
+.glowinproducts__heading h2 {
+    max-width: 650px;
+    margin: 0;
+    color: var(--glowin-forest, #24382F);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(38px, 5vw, 60px);
+    font-weight: 400;
+    line-height: 1.05;
+}
+
+
+    .glowinproducts__heading h2 em {
+        color: var(--glowin-botanical, #526B59);
+        font-style: italic;
+    }
+
+
+.glowinproducts__heading p {
+    max-width: 520px;
+    margin: 18px 0 0;
+    color: rgba(37,39,36,.55);
+    font-family: "DM Sans", sans-serif;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   VIEW ALL
+   ========================================================= */
+
+.glowinproducts__view-all {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid var(--glowin-gold, #B49A62);
+    color: var(--glowin-forest, #24382F);
+    font-family: "DM Sans", sans-serif;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+
+    .glowinproducts__view-all i {
+        transition: transform .3s ease;
+    }
+
+
+    .glowinproducts__view-all:hover {
+        color: var(--glowin-gold, #B49A62);
+    }
+
+
+        .glowinproducts__view-all:hover i {
+            transform: translate(3px,-3px);
+        }
+
+
+/* =========================================================
+   FILTER
+   ========================================================= */
+
+.glowinproducts__filters {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 30px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+
+    .glowinproducts__filters::-webkit-scrollbar {
+        display: none;
+    }
+
+
+.glowinproducts__filter {
+    min-height: 35px;
+    padding: 0 18px;
+    border: 1px solid rgba(36,56,47,.14);
+    background: transparent;
+    color: rgba(37,39,36,.55);
+    font-family: "DM Sans", sans-serif;
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: .7px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all .3s ease;
+}
+
+
+    .glowinproducts__filter:hover,
+    .glowinproducts__filter.active {
+        border-color: var(--glowin-forest, #24382F);
+        background: var(--glowin-forest, #24382F);
+        color: var(--glowin-ivory, #F8F5EE);
+    }
+
+
+/* =========================================================
+   PRODUCT GRID
+   ========================================================= */
+
+.glowinproducts__grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0,1fr));
+    gap: 15px;
+}
+
+
+.glowinproducts__item {
+    min-width: 0;
+}
+
+
+/* =========================================================
+   PRODUCT CARD
+   ========================================================= */
+
+.glowinproducts__card {
+    height: 100%;
+    background: rgba(255,255,255,.45);
+    border: 1px solid rgba(36,56,47,.08);
+    transition: transform .35s ease, box-shadow .35s ease;
+}
+
+
+    .glowinproducts__card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 50px rgba(36,56,47,.09);
+    }
+
+
+/* =========================================================
+   IMAGE
+   ========================================================= */
+
+.glowinproducts__image-wrapper {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 1 / 1.12;
+    background: var(--glowin-cream, #EEE8DA);
+}
+
+
+.glowinproducts__image-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+    .glowinproducts__image-link img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        transition: transform .7s cubic-bezier(.22,1,.36,1);
+    }
+
+
+.glowinproducts__card:hover
+.glowinproducts__image-link img {
+    transform: scale(1.04);
+}
+
+
+/* =========================================================
+   BADGE
+   ========================================================= */
+
+.glowinproducts__badge {
+    position: absolute;
+    z-index: 3;
+    top: 13px;
+    left: 13px;
+    padding: 7px 9px;
+    background: var(--glowin-forest, #24382F);
+    color: var(--glowin-ivory, #F8F5EE);
+    font-family: "DM Sans", sans-serif;
+    font-size: 6px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+}
+
+
+/* =========================================================
+   WISHLIST
+   ========================================================= */
+
+.glowinproducts__wishlist {
+    position: absolute;
+    z-index: 4;
+    top: 10px;
+    right: 10px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(36,56,47,.12);
+    border-radius: 50%;
+    background: rgba(248,245,238,.88);
+    color: var(--glowin-forest, #24382F);
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+
+    .glowinproducts__wishlist:hover {
+        background: var(--glowin-forest, #24382F);
+        color: var(--glowin-ivory, #F8F5EE);
+    }
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.glowinproducts__content {
+    width: 100%;
+    min-width: 0;
+    padding: 20px 19px 19px;
+    box-sizing: border-box;
+}
+
+
+.glowinproducts__category {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--glowin-gold, #B49A62);
+    font-family: "DM Sans", sans-serif;
+    font-size: 6.5px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+
+.glowinproducts__name {
+    margin: 0;
+}
+
+
+    .glowinproducts__name a {
+        color: var(--glowin-forest, #24382F);
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 21px;
+        font-weight: 400;
+        line-height: 1.15;
+        text-decoration: none;
+    }
+
+
+.glowinproducts__description {
+    height: 36px;
+    margin: 10px 0 12px;
+    overflow: hidden;
+    color: rgba(37,39,36,.52);
+    font-family: "DM Sans", sans-serif;
+    font-size: 8px;
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   RATING
+   ========================================================= */
+
+.glowinproducts__rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 10px;
+    color: rgba(37,39,36,.42);
+    font-family: "DM Sans", sans-serif;
+    font-size: 7px;
+}
+
+
+.glowinproducts__stars {
+    color: var(--glowin-gold, #B49A62);
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   PRICE
+   ========================================================= */
+
+.glowinproducts__price {
+    display: flex;
+    align-items: baseline;
+    gap: 9px;
+}
+
+
+.glowinproducts__current-price {
+    color: var(--glowin-forest, #24382F);
+    font-family: "DM Sans", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+
+.glowinproducts__old-price {
+    color: rgba(37,39,36,.35);
+    font-family: "DM Sans", sans-serif;
+    font-size: 8px;
+    text-decoration: line-through;
+}
+
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
+.glowinproducts__actions {
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 42px;
+    gap: 8px;
+    margin-top: 18px;
+    align-items: stretch;
+}
+
+
+.glowinproducts__view-product {
+    width: 100%;
+    min-width: 0;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 0 12px;
+    border: 1px solid var(--glowin-forest, #24382F);
+    background: transparent;
+    color: var(--glowin-forest, #24382F);
+    font-family: "DM Sans", sans-serif;
+    font-size: 7px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color .3s ease, color .3s ease, transform .3s ease;
+}
+
+
+    .glowinproducts__view-product:hover {
+        background: var(--glowin-forest, #24382F);
+        color: var(--glowin-ivory, #F8F5EE);
+    }
+
+
+.glowinproducts__add-bag {
+    width: 42px;
+    min-width: 42px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    border: 1px solid var(--glowin-gold, #B49A62);
+    border-radius: 0;
+    background: var(--glowin-gold, #B49A62);
+    color: #ffffff;
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: background-color .3s ease, border-color .3s ease, transform .3s ease, box-shadow .3s ease;
+}
+
+    .glowinproducts__add-bag i {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+        line-height: 1;
+    }
+
+    .glowinproducts__add-bag span {
+        display: none;
+    }
+
+    .glowinproducts__add-bag:hover {
+        background: var(--glowin-forest, #24382F);
+        border-color: var(--glowin-forest, #24382F);
+        color: #ffffff;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 18px rgba(36, 56, 47, .15);
+    }
+
+    .glowinproducts__add-bag:active {
+        transform: translateY(0);
+    }
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .glowinproducts__grid {
+        grid-template-columns: repeat(3, minmax(0,1fr));
+    }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .glowinproducts {
+        padding: 80px 0;
+    }
+
+
+    .glowinproducts__container {
+        width: calc(100% - 40px);
+    }
+
+
+    .glowinproducts__header {
+        align-items: flex-start;
+        flex-direction: column;
+        margin-bottom: 35px;
+    }
+
+
+    .glowinproducts__grid {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 520px) {
+
+    .glowinproducts {
+        padding: 65px 0;
+    }
+
+
+    .glowinproducts__container {
+        width: calc(100% - 30px);
+    }
+
+
+    .glowinproducts__heading h2 {
+        font-size: 38px;
+    }
+
+
+    .glowinproducts__grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .glowinproducts__image-wrapper {
+        aspect-ratio: 1 / 1;
+    }
+
+
+    .glowinproducts__content {
+        padding: 21px;
+    }
+
+    .glowinproducts__actions {
+        grid-template-columns: minmax(0, 1fr) 44px;
+        gap: 8px;
+    }
+
+    .glowinproducts__view-product {
+        min-height: 42px;
+        font-size: 7px;
+    }
+
+    .glowinproducts__add-bag {
+        width: 44px;
+        min-width: 44px;
+        height: 42px;
+    }
+
+        .glowinproducts__add-bag i {
+            font-size: 15px;
+        }
+}
+
+@media (max-width: 360px) {
+
+    .glowinproducts__content {
+        padding: 18px 15px;
+    }
+
+    .glowinproducts__actions {
+        grid-template-columns: minmax(0, 1fr) 42px;
+        gap: 6px;
+    }
+
+    .glowinproducts__view-product {
+        min-height: 40px;
+        padding: 0 8px;
+        font-size: 6.5px;
+    }
+
+    .glowinproducts__add-bag {
+        width: 42px;
+        min-width: 42px;
+        height: 40px;
+    }
+}

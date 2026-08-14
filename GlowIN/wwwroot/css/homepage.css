@@ -16,16 +16,22 @@
     --glowin-skin: #D8B59C;
     --glowin-skin-shadow: #C99C81;
 }
+/* Prevent content hiding under sticky nav */
 
+body {
+    padding-top: 0;
+}
 /* =========================================================
    GLOWIN HOMEPAGE HEADER
    Botanical Luxury
    ========================================================= */
 
 .glowinhomepage-header {
-    position: relative;
-    z-index: 1000;
+    position: sticky;
+    top: 0;
+    left: 0;
     width: 100%;
+    z-index: 9999;
     background: var(--glowin-ivory);
 }
 
@@ -35,6 +41,7 @@
    ========================================================= */
 
 .glowinhomepage-navbar {
+    transition: background-color .35s ease, box-shadow .35s ease, backdrop-filter .35s ease, padding .35s ease;
     position: relative;
     width: 100%;
     background: rgba(248, 245, 238, 0.96);
@@ -42,7 +49,13 @@
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
 }
+    /* Scroll State */
 
+    .glowinhomepage-navbar.glowinhomepage-navbar-scrolled {
+        background: rgba(248,245,238,.92);
+        backdrop-filter: blur(18px);
+        box-shadow: 0 8px 30px rgba(36,56,47,.08);
+    }
 
 /* =========================================================
    CONTAINER
@@ -505,4 +518,115 @@
     .glowinhomepage-mobile-toggle span {
         transition: none;
     }
+}
+
+/* =========================================================
+   GLOWIN FLOATING ACTIONS
+   ========================================================= */
+
+.glowinhomepage-floating {
+    position: fixed;
+    right: 22px;
+    bottom: 24px;
+    z-index: 9998;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+
+/* =========================================================
+   SHARED BUTTON
+   ========================================================= */
+
+.glowinhomepage-floating-cart,
+.glowinhomepage-scroll-top {
+    position: relative;
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .3s ease;
+    box-shadow: 0 12px 28px rgba(36,56,47,.15);
+}
+
+.glowinhomepage-floating-cart {
+    background: var(--glowin-forest,#24382F);
+    color: #fff;
+}
+
+.glowinhomepage-scroll-top {
+    background: var(--glowin-gold,#B49A62);
+    color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+}
+
+    .glowinhomepage-scroll-top.glowinhomepage-scroll-visible {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .glowinhomepage-floating-cart:hover,
+    .glowinhomepage-scroll-top:hover {
+        transform: translateY(-4px);
+    }
+
+    .glowinhomepage-floating-cart i,
+    .glowinhomepage-scroll-top i {
+        font-size: 22px;
+    }
+
+
+/* =========================================================
+   CART BADGE
+   ========================================================= */
+
+.glowinhomepage-cart-count {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    min-width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 6px;
+    border-radius: 50%;
+    background: #E74C3C;
+    color: #fff;
+    font-family: "DM Sans", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    box-shadow: 0 4px 10px rgba(0,0,0,.15);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width:768px) {
+
+    .glowinhomepage-floating {
+        right: 16px;
+        bottom: 18px;
+    }
+
+    .glowinhomepage-floating-cart,
+    .glowinhomepage-scroll-top {
+        width: 52px;
+        height: 52px;
+    }
+
+        .glowinhomepage-floating-cart i,
+        .glowinhomepage-scroll-top i {
+            font-size: 20px;
+        }
 }

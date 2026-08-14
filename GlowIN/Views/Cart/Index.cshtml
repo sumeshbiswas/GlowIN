@@ -1,0 +1,178 @@
+﻿@{
+    ViewData["Title"] = "Shopping Cart";
+}
+
+
+<section class="glowincart">
+
+    <div class="glowincart__container">
+
+
+        <!-- =====================================================
+             HEADER
+             ===================================================== -->
+
+        <div class="glowincart__header">
+
+            <span class="glowincart__eyebrow">
+                YOUR SHOPPING BAG
+            </span>
+
+            <h1 class="glowincart__title">
+                Your <em>Cart</em>
+            </h1>
+
+            <p class="glowincart__subtitle">
+                Review your botanical essentials before checkout.
+            </p>
+
+        </div>
+
+
+
+        <!-- =====================================================
+             CART CONTENT
+             ===================================================== -->
+
+        <div class="glowincart__layout">
+
+
+            <!-- =================================================
+                 CART ITEMS
+                 ================================================= -->
+
+            <div class="glowincart__items"
+                 id="glowincartItems">
+
+                <!-- JavaScript will render cart items here -->
+
+            </div>
+
+
+
+            <!-- =================================================
+                 EMPTY CART
+                 ================================================= -->
+
+            <div class="glowincart__empty"
+                 id="glowincartEmpty">
+
+                <div class="glowincart__empty-icon">
+
+                    <i class="bi bi-bag"></i>
+
+                </div>
+
+                <h2>
+                    Your bag is empty
+                </h2>
+
+                <p>
+                    Discover our botanical skincare collection
+                    and find something your skin will love.
+                </p>
+
+                <a asp-controller="Products"
+                   asp-action="Index"
+                   class="glowincart__continue">
+
+                    <span>
+                        Explore Products
+                    </span>
+
+                    <i class="bi bi-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 CART SUMMARY
+                 ================================================= -->
+
+            <aside class="glowincart__summary"
+                   id="glowincartSummary">
+
+
+                <div class="glowincart__summary-header">
+
+                    <span>
+                        ORDER SUMMARY
+                    </span>
+
+                </div>
+
+
+                <div class="glowincart__summary-row">
+
+                    <span>
+                        Subtotal
+                    </span>
+
+                    <strong id="glowincartSubtotal">
+                        ₹0
+                    </strong>
+
+                </div>
+
+
+                <div class="glowincart__summary-row">
+
+                    <span>
+                        Shipping
+                    </span>
+
+                    <strong id="glowincartShipping">
+                        Free
+                    </strong>
+
+                </div>
+
+
+                <div class="glowincart__summary-divider"></div>
+
+
+                <div class="glowincart__summary-total">
+
+                    <span>
+                        Total
+                    </span>
+
+                    <strong id="glowincartTotal">
+                        ₹0
+                    </strong>
+
+                </div>
+
+
+                <button type="button"
+                        class="glowincart__checkout"
+                        id="glowincartCheckout">
+
+                    <span>
+                        Proceed to Checkout
+                    </span>
+
+                    <i class="bi bi-arrow-right"></i>
+
+                </button>
+
+
+                <a asp-controller="Products"
+                   asp-action="Index"
+                   class="glowincart__continue-shopping">
+
+                    Continue Shopping
+
+                </a>
+
+
+            </aside>
+
+        </div>
+
+    </div>
+
+</section>

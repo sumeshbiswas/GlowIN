@@ -1,0 +1,463 @@
+﻿@model GlowIN.Models.Product
+
+@{
+    ViewData["Title"] = Model.ProductName;
+}
+
+
+<section class="glowindetails">
+
+    <div class="glowindetails__container">
+
+
+        <!-- =====================================================
+             BREADCRUMB
+             ===================================================== -->
+
+        <nav class="glowindetails__breadcrumb"
+             aria-label="Breadcrumb">
+
+            <a asp-controller="Home"
+               asp-action="Index">
+
+                Home
+
+            </a>
+
+
+            <i class="bi bi-chevron-right"></i>
+
+
+            <a asp-controller="Products"
+               asp-action="Index">
+
+                Products
+
+            </a>
+
+
+            <i class="bi bi-chevron-right"></i>
+
+
+            <span>
+
+                @Model.ProductName
+
+            </span>
+
+        </nav>
+
+
+
+        <!-- =====================================================
+             PRODUCT DETAILS MAIN AREA
+             ===================================================== -->
+
+        <div class="glowindetails__main">
+
+
+            <!-- =================================================
+            PRODUCT IMAGE GALLERY
+            ================================================= -->
+
+            <div class="glowindetails__visual">
+
+
+                <!-- =============================================
+                     MAIN IMAGE
+                     ============================================= -->
+
+                <div class="glowindetails__image-wrapper">
+
+
+                    <!-- Product Badge -->
+                    @if (!string.IsNullOrWhiteSpace(Model.Badge))
+                    {
+                        <span class="glowindetails__badge">
+                            @Model.Badge
+                        </span>
+                    }
+
+
+                    <!-- Wishlist -->
+
+                    <button type="button"
+                            class="glowindetails__wishlist"
+                            aria-label="Add @Model.ProductName to wishlist">
+
+                        <i class="bi bi-heart"></i>
+
+                    </button>
+
+
+                    <!-- Main Image -->
+
+                    <img id="glowindetailsMainImage"
+                         src="@Model.ImageUrl"
+                         alt="@Model.ProductName"
+                         class="glowindetails__image" />
+
+                </div>
+
+
+
+                <!-- =============================================
+                     IMAGE THUMBNAILS
+                     ============================================= -->
+
+                <div class="glowindetails__thumbnails">
+
+
+                    <!-- Primary Image Thumbnail -->
+
+                    <button type="button"
+                            class="glowindetails__thumbnail glowindetails__thumbnail--active"
+                            data-image="@Model.ImageUrl"
+                            aria-label="View primary product image">
+
+                        <img src="@Model.ImageUrl"
+                             alt="@Model.ProductName" />
+
+                    </button>
+
+
+                    <!-- Secondary Image Thumbnail -->
+                    @if (!string.IsNullOrWhiteSpace(Model.SecondaryImageUrl))
+                    {
+                        <button type="button"
+                                class="glowindetails__thumbnail"
+                                data-image="@Model.SecondaryImageUrl"
+                                aria-label="View secondary product image">
+
+                            <img src="@Model.SecondaryImageUrl"
+                                 alt="@Model.ProductName secondary view" />
+
+                        </button>
+                    }
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 RIGHT SIDE
+                 PRODUCT INFORMATION
+                 ================================================= -->
+
+            <div class="glowindetails__information">
+
+
+                <!-- Product Category -->
+
+                <span class="glowindetails__category">
+
+                    @Model.Category
+
+                </span>
+
+
+
+                <!-- Product Name -->
+
+                <h1 class="glowindetails__title">
+
+                    @Model.ProductName
+
+                </h1>
+
+
+
+                <!-- Short Description -->
+
+                <p class="glowindetails__description">
+
+                    @Model.ShortDescription
+
+                </p>
+
+
+
+                <!-- Rating -->
+
+                <div class="glowindetails__rating">
+
+                    <span class="glowindetails__stars">
+
+                        ★★★★★
+
+                    </span>
+
+
+                    <span class="glowindetails__rating-value">
+
+                        @Model.Rating.ToString("0.0")
+
+                    </span>
+
+
+                    <span class="glowindetails__review-count">
+
+                        (@Model.ReviewCount reviews)
+
+                    </span>
+
+                </div>
+
+
+
+                <!-- Divider -->
+
+                <div class="glowindetails__divider"></div>
+
+
+
+                <!-- Price -->
+
+                <div class="glowindetails__price">
+
+                    <span class="glowindetails__current-price">
+
+                        ₹@Model.Price.ToString("0")
+
+                    </span>
+
+
+                    @if (Model.OldPrice.HasValue)
+                    {
+                        <span class="glowindetails__old-price">
+
+                            ₹@Model.OldPrice.Value.ToString("0")
+
+                        </span>
+                    }
+
+                </div>
+
+
+
+                <!-- =================================================
+                     BASIC PRODUCT INFORMATION
+                     ================================================= -->
+
+                <div class="glowindetails__meta">
+
+
+                    <!-- Size -->
+
+                    <div class="glowindetails__meta-item">
+
+                        <span class="glowindetails__meta-label">
+
+                            Size
+
+                        </span>
+
+                        <span class="glowindetails__meta-value">
+
+                            @Model.Size
+
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- Skin Type -->
+
+                    <div class="glowindetails__meta-item">
+
+                        <span class="glowindetails__meta-label">
+
+                            Skin Type
+
+                        </span>
+
+                        <span class="glowindetails__meta-value">
+
+                            @Model.SkinType
+
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     TEMPORARY ACTION AREA
+                     ================================================= -->
+
+                <div class="glowindetails__actions">
+
+
+                    <button type="button"
+                            class="glowindetails__add-bag"
+                            data-product-id="@Model.Id">
+
+                        <i class="bi bi-bag-plus"></i>
+
+                        <span>
+
+                            Add to Bag
+
+                        </span>
+
+                    </button>
+
+
+                    <button type="button"
+                            class="glowindetails__buy-now"
+                            data-product-id="@Model.Id">
+
+                        <span>
+
+                            Buy Now
+
+                        </span>
+
+                        <i class="bi bi-arrow-right"></i>
+
+                    </button>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =====================================================
+             PRODUCT DESCRIPTION
+             ===================================================== -->
+
+        <section class="glowindetails__description-section">
+
+
+            <div class="glowindetails__section-heading">
+
+                <span class="glowindetails__eyebrow">
+
+                    ABOUT THE PRODUCT
+
+                </span>
+
+
+                <h2>
+
+                    Naturally crafted for your
+                    <em>skin.</em>
+
+                </h2>
+
+            </div>
+
+
+
+            <div class="glowindetails__description-content">
+
+                <p>
+
+                    @Model.Description
+
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================================
+             PRODUCT BENEFITS
+             ===================================================== -->
+
+        <section class="glowindetails__benefits">
+
+
+            <div class="glowindetails__benefits-heading">
+
+                <span class="glowindetails__eyebrow">
+
+                    WHY YOU'LL LOVE IT
+
+                </span>
+
+
+                <h2>
+
+                    Botanical care,
+                    <em>beautifully simple.</em>
+
+                </h2>
+
+            </div>
+
+
+
+            <div class="glowindetails__benefits-content">
+
+                <p>
+
+                    @Model.Benefits
+
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================================
+             INGREDIENTS
+             ===================================================== -->
+
+        <section class="glowindetails__ingredients">
+
+
+            <div class="glowindetails__ingredients-heading">
+
+                <span class="glowindetails__eyebrow">
+
+                    INGREDIENTS
+
+                </span>
+
+
+                <h2>
+
+                    What's inside
+
+                </h2>
+
+            </div>
+
+
+
+            <div class="glowindetails__ingredients-content">
+
+                <p>
+
+                    @Model.Ingredients
+
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+    </div>
+
+</section>

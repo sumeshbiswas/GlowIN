@@ -1,5 +1,4 @@
 ﻿using GlowIN.Models;
-using GlowIN.Models;
 
 namespace GlowIN.Services
 {

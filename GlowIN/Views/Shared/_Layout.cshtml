@@ -27,6 +27,8 @@
     <link rel="stylesheet" href="~/css/glowinbenefits.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/glowinabout.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/products.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/product-details.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/glowin-cart.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/footer.css" asp-append-version="true" />
 </head>
 <body>
@@ -579,8 +581,50 @@
 
     </footer>
 
+    <!-- =========================================================
+     GLOWIN FLOATING BUTTONS
+     ========================================================= -->
+
+    <div class="glowinhomepage-floating">
+
+        <!-- Shopping Cart -->
+
+        <button type="button"
+                class="glowinhomepage-floating-cart"
+                id="glowinhomepageCart">
+
+            <i class="bi bi-bag-fill"></i>
+
+            <span class="glowinhomepage-cart-count"
+                  id="glowinhomepageCartCount">
+
+                0
+
+            </span>
+
+        </button>
+
+
+        <!-- Scroll To Top -->
+
+        <button type="button"
+                class="glowinhomepage-scroll-top"
+                id="glowinhomepageScrollTop"
+                aria-label="Back to top">
+
+            <i class="bi bi-arrow-up"></i>
+
+        </button>
+
+    </div>
+
+
+
+    <script src="~/js/product-details.js" asp-append-version="true"></script>
+    <script src="~/js/glowin-cart.js" asp-append-version="true"></script>
+
     <script>
-                /* =========================================================
+           /* =========================================================
            GLOWIN HOMEPAGE MOBILE NAVIGATION
            ========================================================= */
 
@@ -704,6 +748,85 @@
             );
 
         })();
+
+                /* =========================================================
+           GLOWIN FLOATING ACTIONS
+           ========================================================= */
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const scrollTopBtn =
+                document.getElementById("glowinhomepageScrollTop");
+
+            const cartCount =
+                document.getElementById("glowinhomepageCartCount");
+
+
+            /* ---------------------------------
+               Scroll To Top
+            ---------------------------------- */
+
+            window.addEventListener("scroll", function () {
+
+                if (window.scrollY > 300) {
+
+                    scrollTopBtn.classList.add(
+                        "glowinhomepage-scroll-visible"
+                    );
+
+                } else {
+
+                    scrollTopBtn.classList.remove(
+                        "glowinhomepage-scroll-visible"
+                    );
+
+                }
+
+            });
+
+
+            scrollTopBtn.addEventListener("click", function () {
+
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+
+            });
+
+
+            /* ---------------------------------
+               Cart Count (Temporary)
+            ---------------------------------- */
+
+            let count = 0;
+
+            document.querySelectorAll(".glowinproducts__add-bag")
+                .forEach(function (button) {
+
+                    button.addEventListener("click", function () {
+
+                        count++;
+
+                        cartCount.textContent = count;
+
+                        cartCount.animate(
+                            [
+                                { transform: "scale(1)" },
+                                { transform: "scale(1.3)" },
+                                { transform: "scale(1)" }
+                            ],
+                            {
+                                duration: 300
+                            }
+                        );
+
+                    });
+
+                });
+
+        });
+
         </script>
 
     <!-- Bootstrap 5.3.8 JavaScript -->

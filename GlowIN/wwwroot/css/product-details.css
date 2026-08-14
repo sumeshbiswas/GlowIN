@@ -1,0 +1,1000 @@
+/* =========================================================
+   GLOWIN PRODUCT DETAILS
+   ========================================================= */
+
+.glowindetails {
+    width: 100%;
+    min-height: 100vh;
+    padding: 45px 0 100px;
+    background: var(--glowin-ivory, #F8F5EE);
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.glowindetails__container {
+    width: min(calc(100% - 60px), 1280px);
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   BREADCRUMB
+   ========================================================= */
+
+.glowindetails__breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-bottom: 38px;
+    color: rgba(37, 39, 36, .48);
+    font-family: "DM Sans", sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: .4px;
+}
+
+
+    .glowindetails__breadcrumb a {
+        color: var(--glowin-forest, #24382F);
+        text-decoration: none;
+        transition: color .3s ease;
+    }
+
+
+        .glowindetails__breadcrumb a:hover {
+            color: var(--glowin-gold, #B49A62);
+        }
+
+
+    .glowindetails__breadcrumb i {
+        color: var(--glowin-gold, #B49A62);
+        font-size: 8px;
+    }
+
+
+    .glowindetails__breadcrumb span {
+        max-width: 280px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+
+/* =========================================================
+   MAIN PRODUCT AREA
+   ========================================================= */
+
+.glowindetails__main {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr);
+    gap: 75px;
+    align-items: start;
+}
+
+
+/* =========================================================
+   PRODUCT VISUAL
+   ========================================================= */
+
+.glowindetails__visual {
+    width: 100%;
+    min-width: 0;
+}
+
+
+.glowindetails__image-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1.08;
+    overflow: hidden;
+    background: linear-gradient( 145deg, rgba(238, 232, 218, .95), rgba(248, 245, 238, .95) );
+    border: 1px solid rgba(36, 56, 47, .08);
+    box-shadow: 0 25px 70px rgba(36, 56, 47, .07);
+}
+
+
+.glowindetails__image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform .8s cubic-bezier(.22, 1, .36, 1);
+}
+
+
+.glowindetails__image-wrapper:hover
+.glowindetails__image {
+    transform: scale(1.025);
+}
+
+
+/* =========================================================
+   PRODUCT BADGE
+   ========================================================= */
+
+.glowindetails__badge {
+    position: absolute;
+    z-index: 3;
+    top: 18px;
+    left: 18px;
+    padding: 8px 12px;
+    background: var(--glowin-forest, #24382F);
+    color: var(--glowin-ivory, #F8F5EE);
+    font-family: "DM Sans", sans-serif;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   WISHLIST
+   ========================================================= */
+
+.glowindetails__wishlist {
+    position: absolute;
+    z-index: 5;
+    top: 16px;
+    right: 16px;
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 1px solid rgba(36, 56, 47, .13);
+    border-radius: 50%;
+    background: rgba(248, 245, 238, .92);
+    color: var(--glowin-forest, #24382F);
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    transition: background-color .3s ease, color .3s ease, transform .3s ease, box-shadow .3s ease;
+}
+
+
+    .glowindetails__wishlist i {
+        font-size: 17px;
+        line-height: 1;
+    }
+
+
+    .glowindetails__wishlist:hover {
+        background: var(--glowin-forest, #24382F);
+        color: #FFFFFF;
+        transform: scale(1.06);
+        box-shadow: 0 8px 25px rgba(36, 56, 47, .15);
+    }
+
+
+    .glowindetails__wishlist:active {
+        transform: scale(.96);
+    }
+
+
+/* =========================================================
+   PRODUCT INFORMATION
+   ========================================================= */
+
+.glowindetails__information {
+    min-width: 0;
+    padding-top: 12px;
+}
+
+
+/* =========================================================
+   CATEGORY
+   ========================================================= */
+
+.glowindetails__category {
+    display: block;
+    margin-bottom: 14px;
+    color: var(--glowin-gold, #B49A62);
+    font-family: "DM Sans", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   PRODUCT TITLE
+   ========================================================= */
+
+.glowindetails__title {
+    max-width: 650px;
+    margin: 0;
+    color: var(--glowin-forest, #24382F);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(38px, 4.5vw, 62px);
+    font-weight: 400;
+    line-height: 1.06;
+    letter-spacing: -.8px;
+}
+
+
+/* =========================================================
+   SHORT DESCRIPTION
+   ========================================================= */
+
+.glowindetails__description {
+    max-width: 570px;
+    margin: 21px 0 18px;
+    color: rgba(37, 39, 36, .62);
+    font-family: "DM Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   RATING
+   ========================================================= */
+
+.glowindetails__rating {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 10px;
+}
+
+
+.glowindetails__stars {
+    color: #D69A35;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+
+.glowindetails__rating-value {
+    color: var(--glowin-forest, #24382F);
+    font-weight: 700;
+}
+
+
+.glowindetails__review-count {
+    color: rgba(37, 39, 36, .46);
+}
+
+
+/* =========================================================
+   DIVIDER
+   ========================================================= */
+
+.glowindetails__divider {
+    width: 100%;
+    height: 1px;
+    margin: 28px 0;
+    background: rgba(36, 56, 47, .12);
+}
+
+
+/* =========================================================
+   PRICE
+   ========================================================= */
+
+.glowindetails__price {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+
+.glowindetails__current-price {
+    color: var(--glowin-forest, #24382F);
+    font-family: "DM Sans", sans-serif;
+    font-size: 29px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+
+.glowindetails__old-price {
+    color: rgba(37, 39, 36, .43);
+    font-family: "DM Sans", sans-serif;
+    font-size: 15px;
+    text-decoration: line-through;
+}
+
+
+/* =========================================================
+   PRODUCT META
+   ========================================================= */
+
+.glowindetails__meta {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 27px;
+}
+
+
+.glowindetails__meta-item {
+    min-width: 0;
+    padding: 15px 16px;
+    background: rgba(255, 255, 255, .48);
+    border: 1px solid rgba(36, 56, 47, .08);
+}
+
+
+.glowindetails__meta-label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--glowin-gold, #B49A62);
+    font-family: "DM Sans", sans-serif;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+}
+
+
+.glowindetails__meta-value {
+    display: block;
+    color: var(--glowin-forest, #24382F);
+    font-family: "DM Sans", sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
+.glowindetails__actions {
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 10px;
+    margin-top: 5px;
+}
+
+
+.glowindetails__add-bag,
+.glowindetails__buy-now {
+    width: 100%;
+    min-width: 0;
+    min-height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 0 18px;
+    border-radius: 0;
+    font-family: "DM Sans", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .7px;
+    cursor: pointer;
+    transition: background-color .3s ease, border-color .3s ease, color .3s ease, transform .3s ease, box-shadow .3s ease;
+}
+
+
+/* =========================================================
+   ADD TO BAG
+   ========================================================= */
+
+.glowindetails__add-bag {
+    border: 1px solid var(--glowin-forest, #24382F);
+    background: var(--glowin-forest, #24382F);
+    color: #FFFFFF;
+}
+
+
+    .glowindetails__add-bag i {
+        font-size: 15px;
+        line-height: 1;
+    }
+
+
+    .glowindetails__add-bag:hover {
+        border-color: var(--glowin-botanical, #526B59);
+        background: var(--glowin-botanical, #526B59);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(36, 56, 47, .15);
+    }
+
+
+    .glowindetails__add-bag:active {
+        transform: translateY(0);
+    }
+
+
+/* =========================================================
+   BUY NOW
+   ========================================================= */
+
+.glowindetails__buy-now {
+    border: 1px solid var(--glowin-gold, #B49A62);
+    background: var(--glowin-gold, #B49A62);
+    color: #FFFFFF;
+}
+
+
+    .glowindetails__buy-now i {
+        font-size: 13px;
+        transition: transform .3s ease;
+    }
+
+
+    .glowindetails__buy-now:hover {
+        border-color: var(--glowin-forest, #24382F);
+        background: var(--glowin-forest, #24382F);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(36, 56, 47, .15);
+    }
+
+
+        .glowindetails__buy-now:hover i {
+            transform: translateX(3px);
+        }
+
+
+    .glowindetails__buy-now:active {
+        transform: translateY(0);
+    }
+
+
+/* =========================================================
+   DESCRIPTION SECTION
+   ========================================================= */
+
+.glowindetails__description-section {
+    display: grid;
+    grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+    gap: 80px;
+    margin-top: 105px;
+    padding-top: 70px;
+    border-top: 1px solid rgba(36, 56, 47, .12);
+}
+
+
+/* =========================================================
+   DESCRIPTION HEADING
+   ========================================================= */
+
+.glowindetails__section-heading {
+    min-width: 0;
+}
+
+
+.glowindetails__eyebrow {
+    display: block;
+    margin-bottom: 14px;
+    color: var(--glowin-gold, #B49A62);
+    font-family: "DM Sans", sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+}
+
+
+.glowindetails__section-heading h2 {
+    max-width: 440px;
+    margin: 0;
+    color: var(--glowin-forest, #24382F);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+
+    .glowindetails__section-heading h2 em {
+        color: var(--glowin-botanical, #526B59);
+        font-style: italic;
+    }
+
+
+/* =========================================================
+   DESCRIPTION CONTENT
+   ========================================================= */
+
+.glowindetails__description-content {
+    max-width: 650px;
+    min-width: 0;
+}
+
+
+    .glowindetails__description-content p {
+        margin: 0;
+        color: rgba(37, 39, 36, .62);
+        font-family: "DM Sans", sans-serif;
+        font-size: 12px;
+        line-height: 2;
+    }
+
+
+/* =========================================================
+   BENEFITS SECTION
+   ========================================================= */
+
+.glowindetails__benefits {
+    display: grid;
+    grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+    gap: 80px;
+    margin-top: 70px;
+    padding-top: 55px;
+    border-top: 1px solid rgba(36, 56, 47, .08);
+}
+
+
+.glowindetails__benefits-heading {
+    min-width: 0;
+}
+
+
+    .glowindetails__benefits-heading h2 {
+        max-width: 440px;
+        margin: 0;
+        color: var(--glowin-forest, #24382F);
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: clamp(30px, 3.5vw, 44px);
+        font-weight: 400;
+        line-height: 1.1;
+    }
+
+
+        .glowindetails__benefits-heading h2 em {
+            color: var(--glowin-botanical, #526B59);
+            font-style: italic;
+        }
+
+
+.glowindetails__benefits-content {
+    max-width: 650px;
+}
+
+
+    .glowindetails__benefits-content p {
+        margin: 0;
+        color: rgba(37, 39, 36, .62);
+        font-family: "DM Sans", sans-serif;
+        font-size: 12px;
+        line-height: 2;
+    }
+
+
+/* =========================================================
+   INGREDIENTS SECTION
+   ========================================================= */
+
+.glowindetails__ingredients {
+    display: grid;
+    grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+    gap: 80px;
+    margin-top: 70px;
+    padding-top: 55px;
+    border-top: 1px solid rgba(36, 56, 47, .08);
+}
+
+
+.glowindetails__ingredients-heading {
+    min-width: 0;
+}
+
+
+    .glowindetails__ingredients-heading h2 {
+        margin: 0;
+        color: var(--glowin-forest, #24382F);
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: clamp(30px, 3.5vw, 44px);
+        font-weight: 400;
+        line-height: 1.1;
+    }
+
+
+.glowindetails__ingredients-content {
+    max-width: 650px;
+}
+
+
+    .glowindetails__ingredients-content p {
+        margin: 0;
+        color: rgba(37, 39, 36, .62);
+        font-family: "DM Sans", sans-serif;
+        font-size: 12px;
+        line-height: 2;
+    }
+
+
+/* =========================================================
+   LARGE TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .glowindetails__main {
+        gap: 50px;
+    }
+
+
+    .glowindetails__title {
+        font-size: clamp(38px, 5vw, 54px);
+    }
+
+
+    .glowindetails__description-section,
+    .glowindetails__benefits,
+    .glowindetails__ingredients {
+        gap: 50px;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .glowindetails {
+        padding: 35px 0 80px;
+    }
+
+
+    .glowindetails__container {
+        width: calc(100% - 40px);
+    }
+
+
+    .glowindetails__main {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+
+    .glowindetails__visual {
+        width: min(100%, 720px);
+        margin: 0 auto;
+    }
+
+
+    .glowindetails__information {
+        width: min(100%, 720px);
+        margin: 0 auto;
+        padding-top: 0;
+    }
+
+
+    .glowindetails__title {
+        max-width: 700px;
+        font-size: clamp(38px, 7vw, 56px);
+    }
+
+
+    .glowindetails__description {
+        max-width: 650px;
+    }
+
+
+    .glowindetails__description-section,
+    .glowindetails__benefits,
+    .glowindetails__ingredients {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+
+    .glowindetails__description-section {
+        margin-top: 85px;
+    }
+
+
+    .glowindetails__benefits,
+    .glowindetails__ingredients {
+        margin-top: 60px;
+    }
+
+
+    .glowindetails__description-content,
+    .glowindetails__benefits-content,
+    .glowindetails__ingredients-content {
+        max-width: 720px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE TABLET
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    .glowindetails {
+        padding: 28px 0 65px;
+    }
+
+
+    .glowindetails__container {
+        width: calc(100% - 30px);
+    }
+
+
+    .glowindetails__breadcrumb {
+        margin-bottom: 25px;
+        font-size: 9px;
+    }
+
+
+    .glowindetails__main {
+        gap: 32px;
+    }
+
+
+    .glowindetails__image-wrapper {
+        aspect-ratio: 1 / 1;
+    }
+
+
+    .glowindetails__badge {
+        top: 12px;
+        left: 12px;
+        padding: 7px 9px;
+        font-size: 7px;
+    }
+
+
+    .glowindetails__wishlist {
+        top: 11px;
+        right: 11px;
+        width: 41px;
+        height: 41px;
+    }
+
+
+        .glowindetails__wishlist i {
+            font-size: 15px;
+        }
+
+
+    .glowindetails__category {
+        margin-bottom: 11px;
+        font-size: 9px;
+        letter-spacing: 1.8px;
+    }
+
+
+    .glowindetails__title {
+        font-size: 42px;
+        letter-spacing: -.5px;
+    }
+
+
+    .glowindetails__description {
+        margin-top: 16px;
+        font-size: 11px;
+        line-height: 1.8;
+    }
+
+
+    .glowindetails__divider {
+        margin: 23px 0;
+    }
+
+
+    .glowindetails__current-price {
+        font-size: 26px;
+    }
+
+
+    .glowindetails__meta {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+
+    .glowindetails__meta-item {
+        padding: 13px 14px;
+    }
+
+
+    .glowindetails__actions {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+
+    .glowindetails__add-bag,
+    .glowindetails__buy-now {
+        min-height: 49px;
+    }
+
+
+    .glowindetails__description-section {
+        margin-top: 65px;
+        padding-top: 45px;
+    }
+
+
+    .glowindetails__benefits,
+    .glowindetails__ingredients {
+        margin-top: 50px;
+        padding-top: 40px;
+    }
+
+
+    .glowindetails__section-heading h2,
+    .glowindetails__benefits-heading h2,
+    .glowindetails__ingredients-heading h2 {
+        font-size: 34px;
+    }
+
+
+    .glowindetails__description-content p,
+    .glowindetails__benefits-content p,
+    .glowindetails__ingredients-content p {
+        font-size: 11px;
+        line-height: 1.9;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .glowindetails__container {
+        width: calc(100% - 24px);
+    }
+
+
+    .glowindetails__title {
+        font-size: 36px;
+    }
+
+
+    .glowindetails__current-price {
+        font-size: 24px;
+    }
+
+
+    .glowindetails__old-price {
+        font-size: 13px;
+    }
+
+
+    .glowindetails__breadcrumb span {
+        max-width: 150px;
+    }
+
+
+    .glowindetails__section-heading h2,
+    .glowindetails__benefits-heading h2,
+    .glowindetails__ingredients-heading h2 {
+        font-size: 31px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 340px) {
+
+    .glowindetails__title {
+        font-size: 33px;
+    }
+
+
+    .glowindetails__wishlist {
+        width: 38px;
+        height: 38px;
+    }
+
+
+    .glowindetails__badge {
+        font-size: 6px;
+    }
+}
+
+
+/* =========================================================
+   PRODUCT IMAGE THUMBNAILS
+   ========================================================= */
+
+.glowindetails__thumbnails {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 14px;
+}
+
+
+/* =========================================================
+   THUMBNAIL
+   ========================================================= */
+
+.glowindetails__thumbnail {
+    position: relative;
+    width: 82px;
+    height: 82px;
+    flex: 0 0 82px;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid rgba(36, 56, 47, .10);
+    background: var(--glowin-cream, #EEE8DA);
+    cursor: pointer;
+    transition: border-color .3s ease, transform .3s ease, opacity .3s ease, box-shadow .3s ease;
+}
+
+
+    .glowindetails__thumbnail img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        transition: transform .5s ease;
+    }
+
+
+    /* =========================================================
+   THUMBNAIL HOVER
+   ========================================================= */
+
+    .glowindetails__thumbnail:hover {
+        border-color: var(--glowin-gold, #B49A62);
+        transform: translateY(-2px);
+    }
+
+
+        .glowindetails__thumbnail:hover img {
+            transform: scale(1.05);
+        }
+
+
+/* =========================================================
+   ACTIVE THUMBNAIL
+   ========================================================= */
+
+.glowindetails__thumbnail--active {
+    border-color: var(--glowin-forest, #24382F);
+    box-shadow: 0 0 0 2px rgba(180, 154, 98, .22);
+}
+
+
+/* =========================================================
+   MOBILE THUMBNAILS
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    .glowindetails__thumbnails {
+        gap: 9px;
+        margin-top: 10px;
+    }
+
+
+    .glowindetails__thumbnail {
+        width: 68px;
+        height: 68px;
+        flex-basis: 68px;
+    }
+}
+
+
+@media (max-width: 400px) {
+
+    .glowindetails__thumbnail {
+        width: 60px;
+        height: 60px;
+        flex-basis: 60px;
+    }
+}

@@ -176,3 +176,90 @@
     }
 
 })();
+
+
+/* =========================================================
+   STICKY NAVBAR SCROLL EFFECT
+   ========================================================= */
+
+const navbar =
+    document.querySelector(".glowinhomepage-navbar");
+
+window.addEventListener("scroll", function () {
+
+    if (!navbar) return;
+
+    if (window.scrollY > 40) {
+
+        navbar.classList.add(
+            "glowinhomepage-navbar-scrolled"
+        );
+
+    } else {
+
+        navbar.classList.remove(
+            "glowinhomepage-navbar-scrolled"
+        );
+
+    }
+
+});
+
+/* =========================================================
+   GLOWIN GLOBAL CART BADGE
+   ========================================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    function updateGlobalCartBadge() {
+
+        let cart = [];
+
+
+        try {
+
+            cart =
+                JSON.parse(
+                    localStorage.getItem(
+                        "glowinCart"
+                    )
+                ) || [];
+
+        } catch (error) {
+
+            cart = [];
+
+        }
+
+
+        const totalQuantity =
+            cart.reduce(
+                function (total, item) {
+
+                    return total +
+                        Number(item.quantity);
+
+                },
+                0
+            );
+
+
+        const badges =
+            document.querySelectorAll(
+                "#glowinhomepageCartCount"
+            );
+
+
+        badges.forEach(function (badge) {
+
+            badge.textContent =
+                totalQuantity;
+
+        });
+
+    }
+
+
+    updateGlobalCartBadge();
+
+});

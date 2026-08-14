@@ -1,0 +1,487 @@
+/* =========================================================
+   GLOWIN CART
+   ========================================================= */
+
+.glowincart {
+    width: 100%;
+    min-height: 100vh;
+    padding: 70px 0 110px;
+    background: var(--glowin-ivory, #F8F5EE);
+}
+
+
+.glowincart__container {
+    width: min(calc(100% - 60px), 1200px);
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.glowincart__header {
+    margin-bottom: 55px;
+}
+
+
+.glowincart__eyebrow {
+    display: block;
+    margin-bottom: 13px;
+    color: var(--glowin-gold, #B49A62);
+    font-family: "DM Sans", sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+
+.glowincart__title {
+    margin: 0;
+    color: var(--glowin-forest, #24382F);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(42px, 5vw, 62px);
+    font-weight: 400;
+    line-height: 1.05;
+}
+
+
+    .glowincart__title em {
+        color: var(--glowin-botanical, #526B59);
+        font-style: italic;
+    }
+
+
+.glowincart__subtitle {
+    max-width: 500px;
+    margin: 18px 0 0;
+    color: rgba(37, 39, 36, .58);
+    font-family: "DM Sans", sans-serif;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   LAYOUT
+   ========================================================= */
+
+.glowincart__layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 350px;
+    gap: 40px;
+    align-items: start;
+}
+
+
+/* =========================================================
+   ITEMS
+   ========================================================= */
+
+.glowincart__items {
+    min-width: 0;
+}
+
+
+.glowincart__item {
+    display: grid;
+    grid-template-columns: 110px minmax(0, 1fr) auto;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(36, 56, 47, .10);
+}
+
+
+/* =========================================================
+   IMAGE
+   ========================================================= */
+
+.glowincart__item-image {
+    width: 110px;
+    height: 125px;
+    overflow: hidden;
+    background: var(--glowin-cream, #EEE8DA);
+}
+
+
+    .glowincart__item-image img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+    }
+
+
+/* =========================================================
+   ITEM INFORMATION
+   ========================================================= */
+
+.glowincart__item-info {
+    min-width: 0;
+    padding: 5px 0;
+}
+
+
+.glowincart__item-category {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--glowin-gold, #B49A62);
+    font-family: "DM Sans", sans-serif;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+
+.glowincart__item-name {
+    margin: 0 0 8px;
+    color: var(--glowin-forest, #24382F);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+
+.glowincart__item-size {
+    margin: 0;
+    color: rgba(37, 39, 36, .52);
+    font-family: "DM Sans", sans-serif;
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   ITEM PRICE
+   ========================================================= */
+
+.glowincart__item-price {
+    margin-top: 17px;
+    color: var(--glowin-forest, #24382F);
+    font-family: "DM Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   QUANTITY
+   ========================================================= */
+
+.glowincart__item-controls {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-top: 18px;
+}
+
+
+.glowincart__quantity {
+    display: flex;
+    align-items: center;
+    height: 36px;
+    border: 1px solid rgba(36, 56, 47, .14);
+}
+
+
+    .glowincart__quantity button {
+        width: 34px;
+        height: 34px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        border: none;
+        background: transparent;
+        color: var(--glowin-forest, #24382F);
+        cursor: pointer;
+    }
+
+
+        .glowincart__quantity button:hover {
+            background: var(--glowin-cream, #EEE8DA);
+        }
+
+
+    .glowincart__quantity span {
+        min-width: 30px;
+        text-align: center;
+        color: var(--glowin-forest, #24382F);
+        font-family: "DM Sans", sans-serif;
+        font-size: 10px;
+        font-weight: 700;
+    }
+
+
+/* =========================================================
+   REMOVE
+   ========================================================= */
+
+.glowincart__remove {
+    border: none;
+    background: transparent;
+    color: rgba(37, 39, 36, .42);
+    font-family: "DM Sans", sans-serif;
+    font-size: 9px;
+    cursor: pointer;
+}
+
+
+    .glowincart__remove:hover {
+        color: #B94A48;
+    }
+
+
+/* =========================================================
+   ITEM TOTAL
+   ========================================================= */
+
+.glowincart__item-total {
+    align-self: center;
+    color: var(--glowin-forest, #24382F);
+    font-family: "DM Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   SUMMARY
+   ========================================================= */
+
+.glowincart__summary {
+    position: sticky;
+    top: 110px;
+    padding: 28px;
+    background: var(--glowin-cream, #EEE8DA);
+    border: 1px solid rgba(36, 56, 47, .08);
+}
+
+
+.glowincart__summary-header {
+    margin-bottom: 28px;
+    color: var(--glowin-gold, #B49A62);
+    font-family: "DM Sans", sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+}
+
+
+.glowincart__summary-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 15px;
+    color: rgba(37, 39, 36, .58);
+    font-family: "DM Sans", sans-serif;
+    font-size: 11px;
+}
+
+
+    .glowincart__summary-row strong {
+        color: var(--glowin-forest, #24382F);
+        font-weight: 700;
+    }
+
+
+.glowincart__summary-divider {
+    width: 100%;
+    height: 1px;
+    margin: 22px 0;
+    background: rgba(36, 56, 47, .12);
+}
+
+
+.glowincart__summary-total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 25px;
+    color: var(--glowin-forest, #24382F);
+    font-family: "DM Sans", sans-serif;
+    font-size: 13px;
+}
+
+
+    .glowincart__summary-total strong {
+        font-size: 20px;
+    }
+
+
+/* =========================================================
+   CHECKOUT BUTTON
+   ========================================================= */
+
+.glowincart__checkout {
+    width: 100%;
+    min-height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: none;
+    background: var(--glowin-forest, #24382F);
+    color: #FFFFFF;
+    font-family: "DM Sans", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .8px;
+    cursor: pointer;
+    transition: background-color .3s ease, transform .3s ease;
+}
+
+
+    .glowincart__checkout:hover {
+        background: var(--glowin-botanical, #526B59);
+        transform: translateY(-2px);
+    }
+
+
+.glowincart__continue-shopping {
+    display: block;
+    margin-top: 18px;
+    color: var(--glowin-forest, #24382F);
+    font-family: "DM Sans", sans-serif;
+    font-size: 9px;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+    .glowincart__continue-shopping:hover {
+        color: var(--glowin-gold, #B49A62);
+    }
+
+
+/* =========================================================
+   EMPTY CART
+   ========================================================= */
+
+.glowincart__empty {
+    display: none;
+    padding: 80px 30px;
+    text-align: center;
+    border: 1px solid rgba(36, 56, 47, .08);
+    background: rgba(255, 255, 255, .35);
+}
+
+
+.glowincart__empty-icon {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: var(--glowin-cream, #EEE8DA);
+    color: var(--glowin-forest, #24382F);
+    font-size: 25px;
+}
+
+
+.glowincart__empty h2 {
+    margin: 0 0 10px;
+    color: var(--glowin-forest, #24382F);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+
+.glowincart__empty p {
+    max-width: 430px;
+    margin: 0 auto 25px;
+    color: rgba(37, 39, 36, .55);
+    font-family: "DM Sans", sans-serif;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+
+.glowincart__continue {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    min-height: 46px;
+    padding: 0 20px;
+    background: var(--glowin-forest, #24382F);
+    color: #FFFFFF;
+    font-family: "DM Sans", sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .glowincart__layout {
+        grid-template-columns: 1fr;
+    }
+
+
+    .glowincart__summary {
+        position: static;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .glowincart {
+        padding: 45px 0 70px;
+    }
+
+
+    .glowincart__container {
+        width: calc(100% - 30px);
+    }
+
+
+    .glowincart__header {
+        margin-bottom: 35px;
+    }
+
+
+    .glowincart__item {
+        grid-template-columns: 80px minmax(0, 1fr);
+        gap: 14px;
+    }
+
+
+    .glowincart__item-image {
+        width: 80px;
+        height: 95px;
+    }
+
+
+    .glowincart__item-total {
+        grid-column: 2;
+        align-self: start;
+        margin-top: -8px;
+    }
+
+
+    .glowincart__item-name {
+        font-size: 18px;
+    }
+
+
+    .glowincart__summary {
+        padding: 22px;
+    }
+}

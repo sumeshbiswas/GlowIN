@@ -3,12 +3,12 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace GlowIN.Controllers
 {
-    public class ProductsController : Controller
+    public class CartController : Controller
     {
         private readonly ProductService _productService;
 
 
-        public ProductsController(
+        public CartController(
             ProductService productService)
         {
             _productService = productService;
@@ -16,23 +16,22 @@ namespace GlowIN.Controllers
 
 
         // =====================================================
-        // PRODUCT LIST
+        // CART PAGE
         // =====================================================
 
         public IActionResult Index()
         {
-            var products =
-                _productService.GetAllProducts();
-
-            return View(products);
+            return View();
         }
 
 
         // =====================================================
-        // PRODUCT DETAILS
+        // GET PRODUCT
+        // Used by JavaScript / future cart logic
         // =====================================================
 
-        public IActionResult Details(int id)
+        [HttpGet]
+        public IActionResult GetProduct(int id)
         {
             var product =
                 _productService.GetProductById(id);
@@ -44,9 +43,14 @@ namespace GlowIN.Controllers
             }
 
 
-            return View(product);
+            return Json(new
+            {
+                id = product.Id,
+                productName = product.ProductName,
+                imageUrl = product.ImageUrl,
+                size = product.Size,
+                price = product.Price
+            });
         }
-
-
     }
 }
